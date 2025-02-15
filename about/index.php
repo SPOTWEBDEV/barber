@@ -1,7 +1,11 @@
+<?php
+
+include('./server/connection.php');
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
-    
-<!-- Mirrored from themedox.com/demo/gerow/about-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2025 22:56:30 GMT -->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,23 +13,23 @@
         <meta name="description" content="Gerow - Business Consulting HTML Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo $domain ?>assets/img/favicon.png">
         <!-- Place favicon.ico in the root directory -->
 
         <!-- CSS here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-        <link rel="stylesheet" href="assets/css/odometer.css">
-        <link rel="stylesheet" href="assets/css/jarallax.css">
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/aos.css">
-        <link rel="stylesheet" href="assets/css/default.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/animate.min.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/flaticon.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/odometer.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/jarallax.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/slick.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/aos.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/default.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/responsive.css">
     </head>
     <body>
 
@@ -86,7 +90,7 @@
                             <div class="menu-wrap">
                                 <nav class="menu-nav">
                                     <div class="logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                        <a href="index.html"><img src="<?php echo $domain ?>assets/img/logo/logo.png" alt="Logo"></a>
                                     </div>
                                     <div class="navbar-wrap main-menu d-none d-lg-flex">
                                         <ul class="navigation">
@@ -169,7 +173,7 @@
                                 <nav class="menu-box">
                                     <div class="close-btn"><i class="fas fa-times"></i></div>
                                     <div class="nav-logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                        <a href="index.html"><img src="<?php echo $domain ?>assets/img/logo/logo.png" alt="Logo"></a>
                                     </div>
                                     <div class="mobile-search">
                                         <form action="#">
@@ -230,7 +234,7 @@
         <main class="fix">
 
             <!-- breadcrumb-area -->
-            <section class="breadcrumb-area breadcrumb-bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
+            <section class="breadcrumb-area breadcrumb-bg" data-background="<?php echo $domain ?>assets/img/bg/breadcrumb_bg.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -247,8 +251,8 @@
                     </div>
                 </div>
                 <div class="breadcrumb-shape-wrap">
-                    <img src="assets/img/images/breadcrumb_shape01.png" alt="">
-                    <img src="assets/img/images/breadcrumb_shape02.png" alt="">
+                    <img src="<?php echo $domain ?>assets/img/images/breadcrumb_shape01.png" alt="">
+                    <img src="<?php echo $domain ?>assets/img/images/breadcrumb_shape02.png" alt="">
                 </div>
             </section>
             <!-- breadcrumb-area-end -->
@@ -259,7 +263,7 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-6 col-md-9">
                             <div class="about-img-eight">
-                                <img src="assets/img/images/inner_about_img03.jpg" alt="">
+                                <img src="<?php echo $domain ?>assets/img/images/inner_about_img03.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -291,7 +295,7 @@
                                         </li>
                                     </ul>
                                     <div class="right-slide-img">
-                                        <img src="assets/img/images/inner_about_img04.jpg" alt="">
+                                        <img src="<?php echo $domain ?>assets/img/images/inner_about_img04.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="about-content-bottom">
@@ -300,7 +304,7 @@
                                     </div>
                                     <div class="about-author-info">
                                         <div class="thumb">
-                                            <img src="assets/img/images/about_author.png" alt="">
+                                            <img src="<?php echo $domain ?>assets/img/images/about_author.png" alt="">
                                         </div>
                                         <div class="content">
                                             <h2 class="title">Mark Stranger</h2>
@@ -372,7 +376,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="choose-img-three">
-                                <img src="assets/img/images/inner_choose_img.jpg" alt="">
+                                <img src="<?php echo $domain ?>assets/img/images/inner_choose_img.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -382,7 +386,7 @@
 
 
             <!-- team-area -->
-            <section class="team-area team-bg" data-background="assets/img/bg/team_bg.jpg">
+            <section class="team-area team-bg" data-background="<?php echo $domain ?>assets/img/bg/team_bg.jpg">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-6 col-lg-8">
@@ -397,7 +401,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                             <div class="team-item">
                                 <div class="team-thumb">
-                                    <img src="assets/img/team/team_img01.jpg" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/team/team_img01.jpg" alt="">
                                     <div class="team-social">
                                         <ul class="list-wrap">
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -416,7 +420,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                             <div class="team-item">
                                 <div class="team-thumb">
-                                    <img src="assets/img/team/team_img02.jpg" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/team/team_img02.jpg" alt="">
                                     <div class="team-social">
                                         <ul class="list-wrap">
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -435,7 +439,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                             <div class="team-item">
                                 <div class="team-thumb">
-                                    <img src="assets/img/team/team_img03.jpg" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/team/team_img03.jpg" alt="">
                                     <div class="team-social">
                                         <ul class="list-wrap">
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -454,7 +458,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
                             <div class="team-item">
                                 <div class="team-thumb">
-                                    <img src="assets/img/team/team_img04.jpg" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/team/team_img04.jpg" alt="">
                                     <div class="team-social">
                                         <ul class="list-wrap">
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -482,11 +486,11 @@
                     <div class="row g-0 align-items-end">
                         <div class="col-37">
                             <div class="testimonial-img-three">
-                                <img src="assets/img/images/h3_testimonial_img.jpg" alt="">
+                                <img src="<?php echo $domain ?>assets/img/images/h3_testimonial_img.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-63">
-                            <div class="testimonial-item-wrap-three" data-background="assets/img/bg/h3_testimonial_bg.png">
+                            <div class="testimonial-item-wrap-three" data-background="<?php echo $domain ?>assets/img/bg/h3_testimonial_bg.png">
                                 <div class="testimonial-active-three">
                                     <div class="testimonial-item-three">
                                         <div class="testimonial-content-three">
@@ -535,32 +539,32 @@
                     <div class="row brand-active">
                         <div class="col-lg-12">
                             <div class="brand-item">
-                                <img src="assets/img/brand/brand_img01.png" alt="">
+                                <img src="<?php echo $domain ?>assets/img/brand/brand_img01.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="brand-item">
-                                <img src="assets/img/brand/brand_img02.png" alt="">
+                                <img src="<?php echo $domain ?>assets/img/brand/brand_img02.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="brand-item">
-                                <img src="assets/img/brand/brand_img03.png" alt="">
+                                <img src="<?php echo $domain ?>assets/img/brand/brand_img03.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="brand-item">
-                                <img src="assets/img/brand/brand_img04.png" alt="">
+                                <img src="<?php echo $domain ?>assets/img/brand/brand_img04.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="brand-item">
-                                <img src="assets/img/brand/brand_img05.png" alt="">
+                                <img src="<?php echo $domain ?>assets/img/brand/brand_img05.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="brand-item">
-                                <img src="assets/img/brand/brand_img03.png" alt="">
+                                <img src="<?php echo $domain ?>assets/img/brand/brand_img03.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -575,7 +579,7 @@
 
         <!-- footer-area -->
         <footer>
-            <div class="footer-area footer-bg" data-background="assets/img/bg/footer_bg.jpg">
+            <div class="footer-area footer-bg" data-background="<?php echo $domain ?>assets/img/bg/footer_bg.jpg">
                 <div class="container">
                     <div class="footer-top">
                         <div class="row">
@@ -660,7 +664,7 @@
                             <div class="col-md-6">
                                 <div class="left-sider">
                                     <div class="f-logo">
-                                        <a href="index.html"><img src="assets/img/logo/w_logo.png" alt=""></a>
+                                        <a href="index.html"><img src="<?php echo $domain ?>assets/img/logo/w_logo.png" alt=""></a>
                                     </div>
                                     <div class="copyright-text">
                                         <p>Copyright © gerow | All Right Reserved</p>
@@ -687,26 +691,26 @@
 
 
         <!-- JS here -->
-        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.odometer.min.js"></script>
-        <script src="assets/js/jquery.appear.js"></script>
-        <script src="assets/js/gsap.js"></script>
-        <script src="assets/js/ScrollTrigger.js"></script>
-        <script src="assets/js/SplitText.js"></script>
-        <script src="assets/js/gsap-animation.js"></script>
-        <script src="assets/js/jarallax.min.js"></script>
-        <script src="assets/js/jquery.parallaxScroll.min.js"></script>
-        <script src="assets/js/particles.min.js"></script>
-        <script src="assets/js/jquery.easypiechart.min.js"></script>
-        <script src="assets/js/jquery.inview.min.js"></script>
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/ajax-form.js"></script>
-        <script src="assets/js/aos.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="<?php echo $domain ?>assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.odometer.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.appear.js"></script>
+        <script src="<?php echo $domain ?>assets/js/gsap.js"></script>
+        <script src="<?php echo $domain ?>assets/js/ScrollTrigger.js"></script>
+        <script src="<?php echo $domain ?>assets/js/SplitText.js"></script>
+        <script src="<?php echo $domain ?>assets/js/gsap-animation.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jarallax.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.parallaxScroll.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/particles.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.easypiechart.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.inview.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/swiper-bundle.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/slick.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/ajax-form.js"></script>
+        <script src="<?php echo $domain ?>assets/js/aos.js"></script>
+        <script src="<?php echo $domain ?>assets/js/wow.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/main.js"></script>
     </body>
 
 <!-- Mirrored from themedox.com/demo/gerow/about-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2025 22:56:31 GMT -->

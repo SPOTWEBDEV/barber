@@ -1,7 +1,12 @@
+<?php
+
+include('./server/connection.php');
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
     
-<!-- Mirrored from themedox.com/demo/gerow/about-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2025 22:56:31 GMT -->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,23 +14,23 @@
         <meta name="description" content="Gerow - Business Consulting HTML Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo $domain ?>assets/img/favicon.png">
         <!-- Place favicon.ico in the root directory -->
 
         <!-- CSS here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-        <link rel="stylesheet" href="assets/css/odometer.css">
-        <link rel="stylesheet" href="assets/css/jarallax.css">
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/aos.css">
-        <link rel="stylesheet" href="assets/css/default.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/animate.min.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/flaticon.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/odometer.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/jarallax.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/slick.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/aos.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/default.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo $domain ?>assets/css/responsive.css">
     </head>
     <body>
 
@@ -86,7 +91,7 @@
                             <div class="menu-wrap">
                                 <nav class="menu-nav">
                                     <div class="logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                        <a href="index.html"><img src="<?php echo $domain ?>assets/img/logo/logo.png" alt="Logo"></a>
                                     </div>
                                     <div class="navbar-wrap main-menu d-none d-lg-flex">
                                         <ul class="navigation">
@@ -169,7 +174,7 @@
                                 <nav class="menu-box">
                                     <div class="close-btn"><i class="fas fa-times"></i></div>
                                     <div class="nav-logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                        <a href="index.html"><img src="<?php echo $domain ?>assets/img/logo/logo.png" alt="Logo"></a>
                                     </div>
                                     <div class="mobile-search">
                                         <form action="#">
@@ -230,7 +235,7 @@
         <main class="fix">
 
             <!-- breadcrumb-area -->
-            <section class="breadcrumb-area breadcrumb-bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
+            <section class="breadcrumb-area breadcrumb-bg" data-background="<?php echo $domain ?>assets/img/bg/breadcrumb_bg.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -247,8 +252,8 @@
                     </div>
                 </div>
                 <div class="breadcrumb-shape-wrap">
-                    <img src="assets/img/images/breadcrumb_shape01.png" alt="">
-                    <img src="assets/img/images/breadcrumb_shape02.png" alt="">
+                    <img src="<?php echo $domain ?>assets/img/images/breadcrumb_shape01.png" alt="">
+                    <img src="<?php echo $domain ?>assets/img/images/breadcrumb_shape02.png" alt="">
                 </div>
             </section>
             <!-- breadcrumb-area-end -->
@@ -260,14 +265,14 @@
                         <div class="col-lg-7 col-md-10 order-0 order-lg-2">
                             <div class="about-img-wrap-four">
                                 <div class="mask-img-wrap">
-                                    <img src="assets/img/images/h3_about_img01.jpg" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/images/h3_about_img01.jpg" alt="">
                                 </div>
                                 <div class="icon"><i class="flaticon-business-presentation"></i></div>
-                                <img src="assets/img/images/h3_about_img02.jpg" alt="" class="img-two">
+                                <img src="<?php echo $domain ?>assets/img/images/h3_about_img02.jpg" alt="" class="img-two">
                                 <div class="about-shape-wrap-three">
-                                    <img src="assets/img/images/h3_about_shape01.png" alt="">
-                                    <img src="assets/img/images/h3_about_shape02.png" alt="">
-                                    <img src="assets/img/images/h3_about_shape03.png" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/images/h3_about_shape01.png" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/images/h3_about_shape02.png" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/images/h3_about_shape03.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -310,7 +315,7 @@
             <!-- cta-area -->
             <section class="cta-area-five">
                 <div class="container">
-                    <div class="cta-inner-wrap-two" data-background="assets/img/bg/cta_bg02.jpg">
+                    <div class="cta-inner-wrap-two" data-background="<?php echo $domain ?>assets/img/bg/cta_bg02.jpg">
                         <div class="row align-items-center">
                             <div class="col-lg-9">
                                 <div class="cta-content">
@@ -403,7 +408,7 @@
                     </div>
                 </div>
                 <div class="inner-counter-shape">
-                    <img src="assets/img/images/inner_counter_shape.png" alt="" data-aos="fade-left" data-aos-delay="0">
+                    <img src="<?php echo $domain ?>assets/img/images/inner_counter_shape.png" alt="" data-aos="fade-left" data-aos-delay="0">
                 </div>
             </section>
             <!-- counter-area-end -->
@@ -425,7 +430,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                             <div class="team-item-four">
                                 <div class="team-thumb-four">
-                                    <img src="assets/img/team/h4_team_img01.jpg" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/team/h4_team_img01.jpg" alt="">
                                     <div class="team-social-three">
                                         <div class="social-toggle-icon">
                                             <i class="fas fa-share-alt"></i>
@@ -447,7 +452,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                             <div class="team-item-four">
                                 <div class="team-thumb-four">
-                                    <img src="assets/img/team/h4_team_img02.jpg" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/team/h4_team_img02.jpg" alt="">
                                     <div class="team-social-three">
                                         <div class="social-toggle-icon">
                                             <i class="fas fa-share-alt"></i>
@@ -469,7 +474,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                             <div class="team-item-four">
                                 <div class="team-thumb-four">
-                                    <img src="assets/img/team/h4_team_img03.jpg" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/team/h4_team_img03.jpg" alt="">
                                     <div class="team-social-three">
                                         <div class="social-toggle-icon">
                                             <i class="fas fa-share-alt"></i>
@@ -491,7 +496,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                             <div class="team-item-four">
                                 <div class="team-thumb-four">
-                                    <img src="assets/img/team/h4_team_img04.jpg" alt="">
+                                    <img src="<?php echo $domain ?>assets/img/team/h4_team_img04.jpg" alt="">
                                     <div class="team-social-three">
                                         <div class="social-toggle-icon">
                                             <i class="fas fa-share-alt"></i>
@@ -518,7 +523,7 @@
             <!-- pricing-area -->
             <section class="pricing-area-three">
                 <div class="pricing-shape">
-                    <img src="assets/img/images/pricing_shape.png" alt="" data-aos="fade-left" data-aos-delay="200">
+                    <img src="<?php echo $domain ?>assets/img/images/pricing_shape.png" alt="" data-aos="fade-left" data-aos-delay="200">
                 </div>
                 <div class="container">
                     <div class="row align-items-center justify-content-center">
@@ -555,11 +560,11 @@
                                     </div>
                                     <div class="pricing-list">
                                         <ul class="list-wrap">
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">5000 User Activities</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">Unlimited Access</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">No Hidden Charge</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">03 Time Updates</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">Figma Source File</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">5000 User Activities</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Unlimited Access</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">No Hidden Charge</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">03 Time Updates</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Figma Source File</li>
                                         </ul>
                                     </div>
                                     <div class="pricing-btn-two">
@@ -581,11 +586,11 @@
                                     </div>
                                     <div class="pricing-list">
                                         <ul class="list-wrap">
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">5000 User Activities</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">Unlimited Access</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">No Hidden Charge</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">03 Time Updates</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">Figma Source File</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">5000 User Activities</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Unlimited Access</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">No Hidden Charge</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">03 Time Updates</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Figma Source File</li>
                                         </ul>
                                     </div>
                                     <div class="pricing-btn-two">
@@ -607,11 +612,11 @@
                                     </div>
                                     <div class="pricing-list">
                                         <ul class="list-wrap">
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">5000 User Activities</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">Unlimited Access</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">No Hidden Charge</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">03 Time Updates</li>
-                                            <li><img src="assets/img/icons/check_icon03.svg" alt="">Figma Source File</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">5000 User Activities</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Unlimited Access</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">No Hidden Charge</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">03 Time Updates</li>
+                                            <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Figma Source File</li>
                                         </ul>
                                     </div>
                                     <div class="pricing-btn-two">
@@ -632,7 +637,7 @@
 
         <!-- footer-area -->
         <footer>
-            <div class="footer-area footer-bg" data-background="assets/img/bg/footer_bg.jpg">
+            <div class="footer-area footer-bg" data-background="<?php echo $domain ?>assets/img/bg/footer_bg.jpg">
                 <div class="container">
                     <div class="footer-top">
                         <div class="row">
@@ -717,7 +722,7 @@
                             <div class="col-md-6">
                                 <div class="left-sider">
                                     <div class="f-logo">
-                                        <a href="index.html"><img src="assets/img/logo/w_logo.png" alt=""></a>
+                                        <a href="index.html"><img src="<?php echo $domain ?>assets/img/logo/w_logo.png" alt=""></a>
                                     </div>
                                     <div class="copyright-text">
                                         <p>Copyright © gerow | All Right Reserved</p>
@@ -744,26 +749,26 @@
 
 
         <!-- JS here -->
-        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.odometer.min.js"></script>
-        <script src="assets/js/jquery.appear.js"></script>
-        <script src="assets/js/gsap.js"></script>
-        <script src="assets/js/ScrollTrigger.js"></script>
-        <script src="assets/js/SplitText.js"></script>
-        <script src="assets/js/gsap-animation.js"></script>
-        <script src="assets/js/jarallax.min.js"></script>
-        <script src="assets/js/jquery.parallaxScroll.min.js"></script>
-        <script src="assets/js/particles.min.js"></script>
-        <script src="assets/js/jquery.easypiechart.min.js"></script>
-        <script src="assets/js/jquery.inview.min.js"></script>
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/ajax-form.js"></script>
-        <script src="assets/js/aos.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="<?php echo $domain ?>assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.odometer.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.appear.js"></script>
+        <script src="<?php echo $domain ?>assets/js/gsap.js"></script>
+        <script src="<?php echo $domain ?>assets/js/ScrollTrigger.js"></script>
+        <script src="<?php echo $domain ?>assets/js/SplitText.js"></script>
+        <script src="<?php echo $domain ?>assets/js/gsap-animation.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jarallax.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.parallaxScroll.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/particles.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.easypiechart.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/jquery.inview.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/swiper-bundle.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/slick.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/ajax-form.js"></script>
+        <script src="<?php echo $domain ?>assets/js/aos.js"></script>
+        <script src="<?php echo $domain ?>assets/js/wow.min.js"></script>
+        <script src="<?php echo $domain ?>assets/js/main.js"></script>
     </body>
 
 <!-- Mirrored from themedox.com/demo/gerow/about-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2025 22:56:32 GMT -->

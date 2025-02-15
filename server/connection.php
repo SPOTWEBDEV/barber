@@ -35,7 +35,7 @@ if ($request == 'https') {
     define("DATABASE", "tifkvkth_crypto");
 }
 elseif ($request == 'http') {
-    $domain = "http://localhost/barber/index.php";
+    $domain = "http://localhost/barber/";
     define("USER", "root");
     define("PASSWORD", "");
     define("DATABASE", "jay");
