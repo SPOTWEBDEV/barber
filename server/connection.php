@@ -49,13 +49,13 @@ if (!$connection) {
 }
 
 // // Site configurations
-$sitename = "Susano Massage";
+$sitename = "Gofinecutz";
 
 
 // email config 
-$siteemail = "support@fusionsassets.com";
-$emailpassword  = "support@fusionsassets.com";
-$host = 'mail.fusionsassets.com';
+$siteemail = "support@gofinecutz.com";
+$emailpassword  = "support@gofinecutz.com";
+$host = 'mail.gofinecutz.com';
 $sitephone  = "07443961597";
 $siteaddress  = "At Caversham Houses, 18 kingston Gardens Beddington Surrey Cro 4tx";
 

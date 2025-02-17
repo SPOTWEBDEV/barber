@@ -1,6 +1,6 @@
 <?php
 
-include('./server/connection.php');
+include('../server/connection.php');
 
 ?>
 
@@ -272,7 +272,7 @@ include('./server/connection.php');
                                     <span class="sub-title">Get To Know More</span>
                                     <h2 class="title">We Have More Than 20+ Years Of Practical Finance Industries</h2>
                                 </div>
-                                <p>Morem ipsum dolor sit amet consectetur adipiscing elita florai psum dolor sit amet consecteture Borem ipsum dolor sitter consectetur adipiscing elita florai rem ipsum dolor sit amet consectetu.</p>
+                                <p>At *Elite Cuts*, we believe that a great haircut is more than just a style—it’s a statement. That’s why we pay close attention to detail, ensuring every cut complements your personality and enhances your confidence. Our barbers stay up-to-date with the latest trends to provide a fresh, stylish experience every time. </p>
                                 <div class="about-content-inner">
                                     <ul class="list-wrap">
                                         <li>
@@ -385,192 +385,11 @@ include('./server/connection.php');
             <!-- choose-area-end -->
 
 
-            <!-- team-area -->
-            <section class="team-area team-bg" data-background="<?php echo $domain ?>assets/img/bg/team_bg.jpg">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-6 col-lg-8">
-                            <div class="section-title text-center mb-50">
-                                <span class="sub-title">Skilled Team Members</span>
-                                <h2 class="title">Meet Our Dedicated Team</h2>
-                                <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
-                            <div class="team-item">
-                                <div class="team-thumb">
-                                    <img src="<?php echo $domain ?>assets/img/team/team_img01.jpg" alt="">
-                                    <div class="team-social">
-                                        <ul class="list-wrap">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <h2 class="title"><a href="team-details.html">Brooklyn Simmons</a></h2>
-                                    <span>Finance Advisor</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
-                            <div class="team-item">
-                                <div class="team-thumb">
-                                    <img src="<?php echo $domain ?>assets/img/team/team_img02.jpg" alt="">
-                                    <div class="team-social">
-                                        <ul class="list-wrap">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <h2 class="title"><a href="team-details.html">Guy Hawkins</a></h2>
-                                    <span>Investment Department</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
-                            <div class="team-item">
-                                <div class="team-thumb">
-                                    <img src="<?php echo $domain ?>assets/img/team/team_img03.jpg" alt="">
-                                    <div class="team-social">
-                                        <ul class="list-wrap">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <h2 class="title"><a href="team-details.html">Savannah Nguyen</a></h2>
-                                    <span>Business Consulting</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9">
-                            <div class="team-item">
-                                <div class="team-thumb">
-                                    <img src="<?php echo $domain ?>assets/img/team/team_img04.jpg" alt="">
-                                    <div class="team-social">
-                                        <ul class="list-wrap">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <h2 class="title"><a href="team-details.html">Kristin Watson</a></h2>
-                                    <span>Marketing Head</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- team-area-end -->
 
 
-            <!-- testimonial-area -->
-            <section class="testimonial-area-three testimonial-area-six pt-120">
-                <div class="container">
-                    <div class="row g-0 align-items-end">
-                        <div class="col-37">
-                            <div class="testimonial-img-three">
-                                <img src="<?php echo $domain ?>assets/img/images/h3_testimonial_img.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-63">
-                            <div class="testimonial-item-wrap-three" data-background="<?php echo $domain ?>assets/img/bg/h3_testimonial_bg.png">
-                                <div class="testimonial-active-three">
-                                    <div class="testimonial-item-three">
-                                        <div class="testimonial-content-three">
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                            <p>“ Morem ipsum dolor sit amet, consectetur adipiscing elita florai sum dolor sit amet, consecteture.Borem ipsum dolor sit amet, consectetur adipiscing elita Moremsit amet.</p>
-                                            <div class="testimonial-info">
-                                                <h2 class="title">Mr.Robey Alexa</h2>
-                                                <span>CEO, Gerow Agency</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-item-three">
-                                        <div class="testimonial-content-three">
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                            <p>“ Lorem ipsum dolor sit amet, consectetur adipiscing elita florai sum dolor sit amet, consecteture.Borem ipsum dolor sit amet, consectetur adipiscing.</p>
-                                            <div class="testimonial-info">
-                                                <h2 class="title">Guy Hawkins</h2>
-                                                <span>CEO, Gerow Agency</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-nav-three"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- testimonial-area-end -->
+        
 
-            <!-- brand-area -->
-            <div class="brand-area-six pt-80 pb-80">
-                <div class="container">
-                    <div class="row brand-active">
-                        <div class="col-lg-12">
-                            <div class="brand-item">
-                                <img src="<?php echo $domain ?>assets/img/brand/brand_img01.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="brand-item">
-                                <img src="<?php echo $domain ?>assets/img/brand/brand_img02.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="brand-item">
-                                <img src="<?php echo $domain ?>assets/img/brand/brand_img03.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="brand-item">
-                                <img src="<?php echo $domain ?>assets/img/brand/brand_img04.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="brand-item">
-                                <img src="<?php echo $domain ?>assets/img/brand/brand_img05.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="brand-item">
-                                <img src="<?php echo $domain ?>assets/img/brand/brand_img03.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- brand-area-end -->
+        
 
 
         </main>
@@ -578,115 +397,9 @@ include('./server/connection.php');
 
 
         <!-- footer-area -->
-        <footer>
-            <div class="footer-area footer-bg" data-background="<?php echo $domain ?>assets/img/bg/footer_bg.jpg">
-                <div class="container">
-                    <div class="footer-top">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-7">
-                                <div class="footer-widget">
-                                    <h4 class="fw-title">Information</h4>
-                                    <div class="footer-info">
-                                        <ul class="list-wrap">
-                                            <li>
-                                                <div class="icon">
-                                                    <i class="flaticon-pin"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>58 Street Commercial Road Fratton, Australia</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon">
-                                                    <i class="flaticon-phone-call"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <a href="tel:0123456789">+123 888 9999</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon">
-                                                    <i class="flaticon-clock"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>Mon – Sat: 8 am – 5 pm, <br> Sunday: <span>CLOSED</span></p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-5 col-sm-6">
-                                <div class="footer-widget">
-                                    <h4 class="fw-title">Menu</h4>
-                                    <div class="footer-link">
-                                        <ul class="list-wrap">
-                                            <li><a href="about.html">Company</a></li>
-                                            <li><a href="contact.html">Careers</a></li>
-                                            <li><a href="contact.html">Press media</a></li>
-                                            <li><a href="blog.html">Our Blog</a></li>
-                                            <li><a href="contact.html">Privacy Policy</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-5 col-sm-6">
-                                <div class="footer-widget">
-                                    <h4 class="fw-title">Quick Links</h4>
-                                    <div class="footer-link">
-                                        <ul class="list-wrap">
-                                            <li><a href="contact.html">How it’s Work</a></li>
-                                            <li><a href="contact.html">Partners</a></li>
-                                            <li><a href="contact.html">Testimonials</a></li>
-                                            <li><a href="contact.html">Case Studies</a></li>
-                                            <li><a href="contact.html">Pricing</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-7">
-                                <div class="footer-widget">
-                                    <h4 class="fw-title">Subscribe to Our Newsletter</h4>
-                                    <div class="footer-newsletter">
-                                        <p>Sign up to Privitar’s weekly newsletter to get the latest updates.</p>
-                                        <form action="#">
-                                            <input type="email" placeholder="enter your e-mail">
-                                            <button type="submit">Subscribe</button>
-                                        </form>
-                                        <span>We don’t send you any spam</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-bottom">
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <div class="left-sider">
-                                    <div class="f-logo">
-                                        <a href="index.html"><img src="<?php echo $domain ?>assets/img/logo/w_logo.png" alt=""></a>
-                                    </div>
-                                    <div class="copyright-text">
-                                        <p>Copyright © gerow | All Right Reserved</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="footer-social">
-                                    <ul class="list-wrap">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
+        <?php include('../include/footer.php')  ?>
+       
         <!-- footer-area-end -->
 
 
