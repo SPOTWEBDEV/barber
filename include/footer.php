@@ -29,7 +29,7 @@
                                                     <i class="flaticon-clock"></i>
                                                 </div>
                                                 <div class="content">
-                                                    <p>Mon – Sat: 8 am – 5 pm, <br> Sunday: <span>CLOSED</span></p>
+                                                    <p>Mon – Sunday: 8 am – 5 pm
                                                 </div>
                                             </li>
                                         </ul>
@@ -79,17 +79,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="footer-social">
-                                    <ul class="list-wrap">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

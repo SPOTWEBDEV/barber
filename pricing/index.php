@@ -1,6 +1,6 @@
 <?php
 
-include('../server/connection.php');
+include '../server/connection.php';
 
 ?>
 
@@ -10,7 +10,7 @@ include('../server/connection.php');
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Gerow - Business Consulting HTML Template</title>
+    <title><?php echo $sitename ?></title>
     <meta name="description" content="Gerow - Business Consulting HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -46,7 +46,7 @@ include('../server/connection.php');
     </div>
     <!-- preloader-end -->
 
-    <?php  include('../include/navbar.php')   ?>
+    <?php include '../include/navbar.php' ?>
 
 
     <!-- main-area -->
@@ -77,7 +77,7 @@ include('../server/connection.php');
         <!-- breadcrumb-area-end -->
 
 
- 
+
 
         <!-- pricing-area -->
         <section class="pricing-area-three">
@@ -88,102 +88,97 @@ include('../server/connection.php');
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6">
                         <div class="section-title-two mb-50">
-                            <span class="sub-title">Flexible Pricing Plan</span>
-                            <h2 class="title">We’ve offered the best <br> pricing for you</h2>
+                            <span class="sub-title">Affordable Barber Services</span>
+                            <h2 class="title">Get the Best <br> Grooming at the Right Price</h2>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-10">
                         <div class="section-top-content mb-30">
-                            <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p>
+                            <p>Enjoy professional barber services at unbeatable prices. Choose a plan that fits your style and budget.</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="pricing-item-wrap">
-                    <div class="pricing-tab">
-                        <span class="tab-btn monthly_tab_title">Monthly</span>
-                        <span class="pricing-tab-switcher"></span>
-                        <span class="tab-btn annual_tab_title">Yearly</span>
-                    </div>
+
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 col-sm-10">
                             <div class="pricing-box-three">
                                 <div class="pricing-icon">
-                                    <i class="flaticon-rocket"></i>
+                                    <i class="flaticon-scissors"></i>
                                 </div>
                                 <div class="pricing-plan">
-                                    <h4 class="title">Basic Plan</h4>
+                                    <h4 class="title">Basic Haircut</h4>
                                 </div>
                                 <div class="pricing-price-two">
-                                    <h2 class="price monthly_price"><strong>$</strong>19.00<span>/month</span></h2>
-                                    <h2 class="price annual_price"><strong>$</strong>119.00<span>/year</span></h2>
+                                    <h2 class="price"><strong>₦</strong>2,500<span>/session</span></h2>
                                 </div>
                                 <div class="pricing-list">
                                     <ul class="list-wrap">
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">5000 User Activities</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Unlimited Access</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">No Hidden Charge</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">03 Time Updates</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Figma Source File</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Standard Haircut</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Beard Trim</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Basic Styling</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">No Hidden Charges</li>
                                     </ul>
                                 </div>
                                 <div class="pricing-btn-two">
-                                    <a href="contact.html" class="btn transparent-btn-two">Get The Plan Now</a>
+                                    <a href="contact.html" class="btn transparent-btn-two">Book Now</a>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 col-sm-10">
                             <div class="pricing-box-three">
                                 <div class="pricing-icon">
-                                    <i class="flaticon-inspiration"></i>
+                                    <i class="flaticon-razor"></i>
                                 </div>
                                 <div class="pricing-plan">
-                                    <h4 class="title">Standard</h4>
+                                    <h4 class="title">Premium Grooming</h4>
                                 </div>
                                 <div class="pricing-price-two">
-                                    <h2 class="price monthly_price"><strong>$</strong>39.00<span>/month</span></h2>
-                                    <h2 class="price annual_price"><strong>$</strong>339.00<span>/year</span></h2>
+                                    <h2 class="price"><strong>₦</strong>5,000<span>/session</span></h2>
                                 </div>
                                 <div class="pricing-list">
                                     <ul class="list-wrap">
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">5000 User Activities</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Unlimited Access</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">No Hidden Charge</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">03 Time Updates</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Figma Source File</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Classic Haircut</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Beard Shaping</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Scalp Treatment</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Facial Scrub</li>
                                     </ul>
                                 </div>
                                 <div class="pricing-btn-two">
-                                    <a href="contact.html" class="btn transparent-btn-two">Get The Plan Now</a>
+                                    <a href="contact.html" class="btn transparent-btn-two">Book Now</a>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 col-sm-10">
                             <div class="pricing-box-three">
                                 <div class="pricing-icon">
-                                    <i class="flaticon-briefcase-1"></i>
+                                    <i class="flaticon-hair-dryer"></i>
                                 </div>
                                 <div class="pricing-plan">
-                                    <h4 class="title">Enterprise</h4>
+                                    <h4 class="title">Luxury Package</h4>
                                 </div>
                                 <div class="pricing-price-two">
-                                    <h2 class="price monthly_price"><strong>$</strong>89.00<span>/month</span></h2>
-                                    <h2 class="price annual_price"><strong>$</strong>899.00<span>/year</span></h2>
+                                    <h2 class="price"><strong>₦</strong>10,000<span>/session</span></h2>
                                 </div>
                                 <div class="pricing-list">
                                     <ul class="list-wrap">
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">5000 User Activities</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Unlimited Access</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">No Hidden Charge</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">03 Time Updates</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Figma Source File</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Custom Haircut</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Hot Towel Shave</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Deluxe Scalp Massage</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Beard & Hair Styling</li>
+                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Premium Hair Products</li>
                                     </ul>
                                 </div>
                                 <div class="pricing-btn-two">
-                                    <a href="contact.html" class="btn transparent-btn-two">Get The Plan Now</a>
+                                    <a href="contact.html" class="btn transparent-btn-two">Book Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -195,7 +190,7 @@ include('../server/connection.php');
 
 
     <!-- footer-area -->
-    <?php include('../include/footer.php')  ?>
+    <?php include '../include/footer.php' ?>
     <!-- footer-area-end -->
 
 

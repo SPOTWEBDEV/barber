@@ -9,7 +9,7 @@ include('../server/connection.php');
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Gerow - Business Consulting HTML Template</title>
+        <title><?php echo $sitename ?></title>
         <meta name="description" content="Gerow - Business Consulting HTML Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -80,7 +80,7 @@ include('../server/connection.php');
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-6 col-md-9">
                             <div class="about-img-eight">
-                                <img height="600" width="500" src="<?php echo $domain ?>assets/img/work/2.jpg" alt="">
+                                <img height="600" width="500" src="<?php echo $domain ?>assets/img/work/6.jpeg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -108,14 +108,14 @@ include('../server/connection.php');
                         <div class="col-lg-6">
                             <div class="choose-content-three">
                                
-                                <p>Beyond haircuts, we build relationships with our clients. Whether you need a quick touch-up, a complete transformation, or advice on maintaining your style, we’re here to help. Join us at *Elite Cuts* and experience the art of precision grooming! </p>
+                                <p>Beyond haircuts, we build relationships with our clients. Whether you need a quick touch-up, a complete transformation, or advice on maintaining your style, we’re here to help. Join us at *<?php  echo $sitename ?>s* and experience the art of precision grooming! </p>
                                 
                                 
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="choose-img-three">
-                                <img src="<?php echo $domain ?>assets/img/work/1.jpg" alt="">
+                                <img style="object-position: center; height:500px;" src="<?php echo $domain ?>assets/img/work/1.jpg" alt="">
                             </div>
                         </div>
                     </div>
