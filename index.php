@@ -62,14 +62,14 @@ include('./server/connection.php');
                 <div class="row justify-content-center">
                     <div class="col-lg-7 col-md-9 order-0 order-lg-2">
                         <div class="banner-img-three" data-aos="fade-left" data-aos-delay="300">
-                            <img src="<?php echo $domain ?>assets/img/banner/h3_banner_img01.jpg" alt="" class="main-img">
-                            <img src="<?php echo $domain ?>assets/img/banner/h3_banner_img02.jpg" alt="" class="img-two" data-parallax='{"y" : 100 }'>
-                            <img src="<?php echo $domain ?>assets/img/banner/h3_banner_img03.jpg" alt="" class="img-three" data-parallax='{"x" : -100 }'>
+                            <img height="500" src="<?php echo $domain ?>assets/img/work/1.jpg" alt="" class="main-img">
+                            
+                            
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="banner-content-three">
-                            <h2 class="title" data-aos="fade-right" data-aos-delay="0">Welcome to *Elite Cuts Barber Studio</h2>
+                            <h2 class="title" data-aos="fade-right" data-aos-delay="0">Welcome to *Go Fine Cutz</h2>
                             <p data-aos="fade-right" data-aos-delay="300">where style meets precision! Our expert barbers are dedicated to delivering sharp, clean cuts that leave you looking and feeling your best. Whether it’s a classic trim, a modern fade, or a stylish beard sculpting, we ensure top-tier service tailored to your unique look. </p>
                             <form action="#" class="banner-form" data-aos="fade-right" data-aos-delay="600">
                                 <input type="text" placeholder="E-mail Address">
@@ -88,72 +88,7 @@ include('./server/connection.php');
 
 
 
-        <!-- features-area -->
-        <section class="features-area-three">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6 col-lg-7">
-                        <div class="section-title-two text-center mb-40 tg-heading-subheading animation-style1">
-                            <span class="sub-title tg-element-title">What We Do For You</span>
-                            <h2 class="title tg-element-title">The features that make our Service unique</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="features-item-wrap-two">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="features-item-three">
-                                <div class="features-icon-three">
-                                    <i class="flaticon-inspiration"></i>
-                                </div>
-                                <div class="features-content-three">
-                                    <h2 class="title">Finance Planning</h2>
-                                    <p>Morem ipsum dolor sittemet consectetur adipiscing elitflorai psum dolor.</p>
-                                    <a href="services-details.html" class="link-btn">See Details <img src="<?php echo $domain ?>assets/img/icons/right-arrow.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="features-item-three">
-                                <div class="features-icon-three">
-                                    <i class="flaticon-layers"></i>
-                                </div>
-                                <div class="features-content-three">
-                                    <h2 class="title">Business Consulting</h2>
-                                    <p>Morem ipsum dolor sittemet consectetur adipiscing elitflorai psum dolor.</p>
-                                    <a href="services-details.html" class="link-btn">See Details <img src="<?php echo $domain ?>assets/img/icons/right-arrow.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="features-item-three">
-                                <div class="features-icon-three">
-                                    <i class="flaticon-calculator"></i>
-                                </div>
-                                <div class="features-content-three">
-                                    <h2 class="title">Tax Advisory</h2>
-                                    <p>Morem ipsum dolor sittemet consectetur adipiscing elitflorai psum dolor.</p>
-                                    <a href="services-details.html" class="link-btn">See Details <img src="<?php echo $domain ?>assets/img/icons/right-arrow.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="features-item-three">
-                                <div class="features-icon-three">
-                                    <i class="flaticon-investment"></i>
-                                </div>
-                                <div class="features-content-three">
-                                    <h2 class="title">Business Audit</h2>
-                                    <p>Morem ipsum dolor sittemet consectetur adipiscing elitflorai psum dolor.</p>
-                                    <a href="services-details.html" class="link-btn">See Details <img src="<?php echo $domain ?>assets/img/icons/right-arrow.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- features-area-end -->
+        
 
         <!-- about-area -->
         <section class="about-area-four pb-120">
@@ -162,10 +97,10 @@ include('./server/connection.php');
                     <div class="col-lg-7 col-md-10 order-0 order-lg-2">
                         <div class="about-img-wrap-four">
                             <div class="mask-img-wrap">
-                                <img src="<?php echo $domain ?>assets/img/images/h3_about_img01.jpg" alt="">
+                                <img  src="<?php echo $domain ?>assets/img/work/1.jpg" alt="">
                             </div>
                             <div class="icon"><i class="flaticon-business-presentation"></i></div>
-                            <img src="<?php echo $domain ?>assets/img/images/h3_about_img02.jpg" alt="" class="img-two">
+                            <!-- <img src="<?php echo $domain ?>assets/img/images/h3_about_img02.jpg" alt="" class="img-two"> -->
                             <div class="about-shape-wrap-three">
                                 <img src="<?php echo $domain ?>assets/img/images/h3_about_shape01.png" alt="">
                                 <img src="<?php echo $domain ?>assets/img/images/h3_about_shape02.png" alt="">
@@ -179,29 +114,12 @@ include('./server/connection.php');
                                 <span class="sub-title tg-element-title">Get To know US</span>
                                 <h2 class="title tg-element-title">We are the next gen Business experience</h2>
                             </div>
-                            <p>At *Elite Cuts Barber Studio*, we are more than just a barbershop—we are a community dedicated to grooming excellence. Founded with a passion for style and precision, our team of expert barbers brings years of experience in men’s grooming, ensuring each client gets a cut that suits their personality and lifestyle. </p>
-                            <div class="about-list-three">
-                                <ul class="list-wrap">
-                                    <li>
-                                        <div class="icon">
-                                            <i class="flaticon-profit"></i>
-                                        </div>
-                                        <div class="content">
-                                            <h2 class="title">Business Growth</h2>
-                                            <p>eiusmod temporincididunt ut labore magna aliqua Quisery.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="flaticon-mission"></i>
-                                        </div>
-                                        <div class="content">
-                                            <h2 class="title">Target Audience</h2>
-                                            <p>eiusmod temporincididunt ut labore magna aliqua Quisery.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            <p>We are a team of skilled and passionate barbers dedicated to bringing out the best in every client. Our expertise spans across different hair textures, styles, and trends, ensuring we cater to a diverse clientele with personalized grooming solutions. </p>
+
+                            <p>At *Go Fine Cutz*, we don’t just cut hair—we craft styles that leave lasting impressions. Whether you’re looking for a clean professional look, a trendy fade, or a sharp beard lineup, our team delivers with precision and artistry. </p>
+
+                            <p>Our dedication to quality service and client satisfaction has made us a trusted name in the barbering industry. We take pride in our craft and in the relationships we build with our customers, ensuring they always leave with a look they love. </p>
+                            
                         </div>
                     </div>
                 </div>
@@ -216,9 +134,9 @@ include('./server/connection.php');
                     <div class="col-lg-6 col-md-10">
                         <div class="overview-img-two">
                             <div class="mask-img-two">
-                                <img src="<?php echo $domain ?>assets/img/images/h3_overview_img01.jpg" alt="">
+                                <img src="<?php echo $domain ?>assets/img/work/3.jpg" alt="">
                             </div>
-                            <img src="<?php echo $domain ?>assets/img/images/h3_overview_img02.jpg" alt="" class="img-two" data-parallax='{"y" : 100 }'>
+                            
                             <div class="overview-shape-wrap">
                                 <img src="<?php echo $domain ?>assets/img/images/h3_overview_shape01.png" alt="">
                                 <img src="<?php echo $domain ?>assets/img/images/h3_overview_shape02.png" alt="">
@@ -229,32 +147,12 @@ include('./server/connection.php');
                         <div class="overview-content-two">
                             <div class="section-title-two mb-30 tg-heading-subheading animation-style1">
                                 <span class="sub-title tg-element-title">Company Overview</span>
-                                <h2 class="title tg-element-title">We Prepare An Effective Strategy For Companies</h2>
+                                <h2 class="title tg-element-title">Our Mission</h2>
                             </div>
-                            <p>Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.</p>
-                            <div class="progress-wrap">
-                                <div class="progress-item">
-                                    <h6 class="title">Consulting</h6>
-                                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="85" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                        <div class="progress-bar wow slideInLeft" data-wow-delay=".1s" style="width: 85%"><span>85%</span></div>
-                                    </div>
-                                </div>
-                                <div class="progress-item">
-                                    <h6 class="title">Investment</h6>
-                                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="76" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                        <div class="progress-bar wow slideInLeft" data-wow-delay=".2s" style="width: 76%"><span>76%</span></div>
-                                    </div>
-                                </div>
-                                <div class="progress-item">
-                                    <h6 class="title">Investment</h6>
-                                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="90" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                        <div class="progress-bar wow slideInLeft" data-wow-delay=".3s" style="width: 90%"><span>90%</span></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <p>Our mission at *Go Fine Cutz* is to redefine the art of grooming by offering top-quality haircuts, beard trims, and styling services tailored to every individual. We believe that a great haircut is more than just aesthetics—it’s about boosting confidence and making a lasting impression. </p>
+
+                            <p>We strive to create an environment where every client feels valued, comfortable, and satisfied with their look. Our team is committed to continuous learning, ensuring we stay ahead of the latest trends and techniques in men’s grooming. Excellence is at the heart of everything we do.</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -457,107 +355,7 @@ include('./server/connection.php');
 
 
     <!-- footer-area -->
-    <footer>
-        <div class="footer-area-three">
-            <div class="footer-top-three">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-7">
-                            <div class="footer-widget">
-                                <div class="fw-logo">
-                                    <a href="index.html"><img src="<?php echo $domain ?>assets/img/logo/w_logo.png" alt=""></a>
-                                </div>
-                                <div class="footer-content">
-                                    <p>When an unknown printer took a galley of type aawer awtnd scrambled it to make a type specimen book.</p>
-                                    <div class="footer-social footer-social-three">
-                                        <ul class="list-wrap">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-5 col-sm-6">
-                            <div class="footer-widget">
-                                <h4 class="fw-title">Menu</h4>
-                                <div class="footer-link">
-                                    <ul class="list-wrap">
-                                        <li><a href="about.html">Company</a></li>
-                                        <li><a href="contact.html">Careers</a></li>
-                                        <li><a href="contact.html">Press media</a></li>
-                                        <li><a href="blog.html">Our Blog</a></li>
-                                        <li><a href="contact.html">Privacy Policy</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-5 col-sm-6">
-                            <div class="footer-widget">
-                                <h4 class="fw-title">Quick Links</h4>
-                                <div class="footer-link">
-                                    <ul class="list-wrap">
-                                        <li><a href="contact.html">How it’s Work</a></li>
-                                        <li><a href="contact.html">Partners</a></li>
-                                        <li><a href="contact.html">Testimonials</a></li>
-                                        <li><a href="contact.html">Case Studies</a></li>
-                                        <li><a href="contact.html">Pricing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-7">
-                            <div class="footer-widget">
-                                <h4 class="fw-title">Contact</h4>
-                                <div class="footer-info">
-                                    <ul class="list-wrap">
-                                        <li>
-                                            <div class="icon">
-                                                <i class="flaticon-pin"></i>
-                                            </div>
-                                            <div class="content">
-                                                <p>58 Street Commercial Road Fratton, Australia</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <i class="flaticon-phone-call"></i>
-                                            </div>
-                                            <div class="content">
-                                                <a href="tel:0123456789">+123 888 9999</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <i class="flaticon-clock"></i>
-                                            </div>
-                                            <div class="content">
-                                                <p>Mon – Sat: 8 am – 5 pm, <br> Sunday: <span>CLOSED</span></p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom-three">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="copyright-text-two text-center">
-                                <p>Copyright © gerow | All Right Reserved</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+      <?php include('./include/footer.php') ?>
     <!-- footer-area-end -->
 
 

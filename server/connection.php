@@ -38,7 +38,7 @@ elseif ($request == 'http') {
     $domain = "http://localhost/barber/";
     define("USER", "root");
     define("PASSWORD", "");
-    define("DATABASE", "jay");
+    define("DATABASE", "booking");
 }
 
 // // Database connection
