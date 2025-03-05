@@ -53,7 +53,7 @@ include '../server/connection.php';
     <main class="fix">
 
         <!-- breadcrumb-area -->
-        <section class="breadcrumb-area breadcrumb-bg" data-background="<?php echo $domain ?>assets/img/bg/breadcrumb_bg.jpg">
+        <section class="breadcrumb-area breadcrumb-bg" data-background="<?php echo $domain ?>assets/img/work/13.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

@@ -188,8 +188,8 @@ include './server/connection.php';
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
-                            <div class="project-thumb-three">
-                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/6.jpeg" alt=""></a>
+                            <div style=""class="project-thumb-three">
+                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/14.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -256,7 +256,7 @@ include './server/connection.php';
                 <div class="row g-0 align-items-end">
                     <div class="col-37">
                         <div class="testimonial-img-three">
-                            <img src="<?php echo $domain ?>assets/img/images/h3_testimonial_img.jpg" alt="">
+                            <img src="<?php echo $domain ?>assets/img/work/12.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-63">
@@ -332,16 +332,16 @@ include './server/connection.php';
                                     </div>
                                     <div class="content">
                                         <span>Call For More Info</span>
-                                        <a href="tel:0123456789">+123 8989 444</a>
+                                        <a href="tel:0123456789"><?php echo $sitephone?></a>
                                     </div>
                                 </div>
                                 <h2 class="title">Let’s Request a Schedule For Free Consultation</h2>
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <div class="cta-btn text-end">
-                                <a href="contact.html" class="btn btn-three">Contact Us</a>
-                            </div>
+                            <!-- <div class="cta-btn text-end">
+                                <a href="<?php echo $domain ?>contact" class="btn btn-three">Contact Us</a>
+                            </div> -->
                         </div>
                     </div>
                 </div>
