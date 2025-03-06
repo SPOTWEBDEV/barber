@@ -29,10 +29,10 @@ define("HOST", "localhost");
 
 // Set configurations based on protocol
 if ($request == 'https') {
-    $domain = "https://fusionsassets.com/";
-    define("USER", "tifkvkth_crypto");
-    define("PASSWORD", "tifkvkth_crypto");
-    define("DATABASE", "tifkvkth_crypto");
+    $domain = "http: //gofinecutz.com.ng/";
+    define("USER", "pdicsrdj_barber");
+    define("PASSWORD", "pdicsrdj_barber");
+    define("DATABASE", "pdicsrdj_barber");
 }
 elseif ($request == 'http') {
     $domain = "http://localhost/barber/";
