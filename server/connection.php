@@ -29,7 +29,7 @@ define("HOST", "localhost");
 
 // Set configurations based on protocol
 if ($request == 'https') {
-    $domain = "http://gofinecutz.com.ng/";
+    $domain = "https://gofinecutz.com.ng/";
     define("USER", "pdicsrdj_barber");
     define("PASSWORD", "pdicsrdj_barber");
     define("DATABASE", "pdicsrdj_barber");
