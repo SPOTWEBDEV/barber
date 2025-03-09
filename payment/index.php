@@ -112,7 +112,7 @@
 
                                     <div class="col-12 mb-2">
                                         <p class="text-muted h8">State</p>
-                                        <input class="form-control" type="text" name="state" placeholder="Enter Full Name" required>
+                                        <input class="form-control" value="Enugu State" readonly type="text" name="state" placeholder="Enter Full Name" required>
                                     </div>
                                     <div class="col-6">
                                         <p class="text-muted h8">Complete Address</p>
