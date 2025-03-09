@@ -23,14 +23,8 @@
                         <div class="header-contact">
                             <a href="tel:<?php echo $sitephone ?>"><i class="flaticon-phone-call"></i><?php echo $sitephone ?></a>
                         </div>
-                        <div class="header-social">
-                            <ul class="list-wrap">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                            </ul>
-                        </div>
+                        
+                      
                     </div>
                 </div>
             </div>
@@ -83,15 +77,7 @@
                             <div class="menu-outer">
                                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                             </div>
-                            <div class="social-links">
-                                <ul class="clearfix list-wrap">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
+                          
                         </nav>
                     </div>
                     <div class="menu-backdrop"></div>
