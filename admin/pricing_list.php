@@ -9,7 +9,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Create Event --                                                                                                                         <?php echo $sitename ?>
+  <title>Create Event --                                                                                                                                                 <?php echo $sitename ?>
 </title>
 
   <!-- Favicon -->
@@ -205,7 +205,7 @@
                                   <th>ID</th>
                                   <th>Title</th>
                                   <th>Price</th>
-                                  
+
                                   <th>Features</th>
                               </tr>
                           </thead>
@@ -216,8 +216,8 @@
                                       echo "<tr>
                                           <td>{$row['id']}</td>
                                           <td>{$row['title']}</td>
-                                          <td>\${$row['price']}</td>
-                                          
+                                          <td>₦{$row['price']}</td>
+
                                           <td>{$row['features']}</td>
                                         </tr>";
                                   }

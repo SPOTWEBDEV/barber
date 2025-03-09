@@ -201,7 +201,7 @@ if (!isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                         <h5 class="card-title text-primary">Welcome to Your Dashboard</h5>
                         <p class="mb-4">You have <span class="fw-bold">
                             <?php
-                            $get_all = mysqli_query($connection, "SELECT * FROM `event`");
+                            $get_all = mysqli_query($connection, "SELECT * FROM `booking`");
                             echo mysqli_num_rows($get_all)
                             ?>
                           </span> Registered Users And You can manage your website from
@@ -239,7 +239,7 @@ if (!isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                         <span class="fw-semibold d-block mb-1">BookKeeping</span>
                         <h3 class="card-title mb-2">
                           <?php
-                          $get_all = mysqli_query($connection, "SELECT * FROM `donations`");
+                          $get_all = mysqli_query($connection, "SELECT * FROM `booking`");
                           echo mysqli_num_rows($get_all)
                           ?>
                         </h3>
@@ -268,7 +268,7 @@ if (!isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                         <h3 class="card-title text-nowrap mb-1">
 
                           <?php
-                          $get_all = mysqli_query($connection, "SELECT sum(amount) as total FROM `donations`");
+                          $get_all = mysqli_query($connection, "SELECT sum(amount) as total FROM `booking`");
                           $row =  mysqli_fetch_assoc($get_all);
                           echo number_format($row['total']) ?? 0;
                           ?>

@@ -204,7 +204,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                   <tbody class="table-border-bottom-0">
                     <?php
 
-                    $sql = mysqli_query($connection, "SELECT * FROM `booking` WHERE `status`='completed'");
+                    $sql = mysqli_query($connection, "SELECT booking.*,user.fullname,user.email,user.phone FROM booking,user WHERE booking.status ='completed' and booking.user=user.id");
                     if (mysqli_num_rows($sql)) {
                       $count = 1;
                       while ($details = mysqli_fetch_assoc($sql)) {

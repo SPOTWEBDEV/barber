@@ -103,7 +103,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                   <tbody class="table-border-bottom-0">
                     <?php
 
-                    $sql = mysqli_query($connection, "SELECT * FROM `booking`");
+                    $sql = mysqli_query($connection, "SELECT booking.*,user.fullname,user.email,user.phone FROM booking,user  where booking.user=user.id");
                     if (mysqli_num_rows($sql)) {
                       $count = 1;
                       while ($details = mysqli_fetch_assoc($sql)) {
@@ -117,7 +117,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                           <td><?php echo $details['email'] ?></td>
                           <td><?php echo $details['phone'] ?></td>
                           <td><?php echo $details['address'] ?></td>
-                          <td><?php echo $details['date'] ?></td>
+                          <td><?php echo $details['appointment_date'] ?></td>
                           <td><?php echo ($details['amount'] == '') ? '0.00' : number_format($details['amount'], 2) ?></td>
                           <td><?php
 
