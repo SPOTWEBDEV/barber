@@ -55,7 +55,7 @@
                             <div class="header-action d-none d-md-block">
                                 <ul class="list-wrap">
                                     <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
-                                    <li class="header-btn"><a href="contact.html" class="btn btn-two">Book Now</a></li>
+                                    <li class="header-btn"><a href="<?php echo $domain ?>user/login.php" class="btn btn-two">Login</a></li>
                                 </ul>
                             </div>
                         </nav>
