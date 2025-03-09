@@ -1,29 +1,27 @@
 <?php
     include '../server/connection.php';
+    include '../server/client/auth.php';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $fullname = mysqli_real_escape_string($connection, $_POST['fullname']);
-        $email    = mysqli_real_escape_string($connection, $_POST['email']);
-        $phone    = mysqli_real_escape_string($connection, $_POST['phone']);
-        $amount   = mysqli_real_escape_string($connection, $_POST['amount']);
-        $bank_id  = mysqli_real_escape_string($connection, $_POST['bank_id']); // Get bank ID
+    // Check if 'barbering' is in the URL
+    $amount = 0;
+    if (isset($_GET['babering'])) {
+        $babering = $_GET['babering'];
 
-        $created_at = date("Y-m-d H:i:s");
-        $updated_at = date("Y-m-d H:i:s");
-        $status     = 'pending'; // Default status
+       
 
-        // Insert data into donations table
-        $query = "INSERT INTO donations (fullname, email, phone, amount, bank_id, created_at, updated_at, status)
-              VALUES ('$fullname', '$email', '$phone', '$amount', '$bank_id', '$created_at', '$updated_at', '$status')";
+        // Fetch amount from pricing_plans table
+        $query = mysqli_query($connection,"SELECT price,title FROM pricing_plans WHERE id = '$babering'");
+        
 
-        if (mysqli_query($connection, $query)) {
-            echo "<script>alert('Donation submitted successfully!'); window.location.href='../index.php';</script>";
-        } else {
-            echo "<script>alert('Error: " . mysqli_error($connection) . "');</script>";
+        if (mysqli_num_rows($query)) {
+            $row = mysqli_fetch_assoc($query);
+            $amount = $row['price'];
+            $title = $row['title'];
         }
     }
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,8 +46,34 @@
         .switch-icon { cursor: pointer; color: rgb(0,29,76); }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+
+<?php
+
+    // Handle form submission
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $state       = $_POST['state'];
+        $address     = $_POST['address'];
+        $close_place = $_POST['close_place'];
+        $date = $_POST['date'];
+
+    
+
+        // Insert into booking table
+        $stmt = mysqli_query($connection,"INSERT INTO booking (user, state, address,close_place, pricing_id, status, created_at, appointment_date,amount,title) VALUES ('$user_login','$state', '$address', '$close_place', '$babering','pending',NOW(), '$date','$amount','$title')");
+
+        if ($stmt) {
+            echo "<script>
+            Swal.fire('Success!', 'Booking successfully submitted!', 'success').then(() => { window.location.href = 'index.php'; });
+        </script>";
+        } else {
+            echo "<script>Swal.fire('Error!', 'Something went wrong!', 'error');</script>";
+        }
+    }
+
+?>
 
 <a href="../" style="border-radius: 50%; height: 50px; width:50px; background-color: white; display: flex; align-items: center; justify-content: center; top: 20px; left:30px; position: fixed;" class="fixed ">
 
@@ -63,7 +87,7 @@
                 <div class="col-12 px-0 mb-4">
                     <div class="box-right">
                         <div class="d-flex pb-2">
-                            <p class="fw-bold h7">Account Details</p>
+                            <p class="fw-bold h7">Account Details </p>
                             <p class="ms-auto">
                                 <span class="switch-icon d-none fas fa-sync-alt me-3" onclick="switchAccount()"></span>
                                 <button class="btn btn-sm btn-success" onclick="switchAccount()">Switch Account</button>
@@ -80,32 +104,36 @@
                 <div class="col-12 px-0">
                     <div class="box-right">
                         <div class="d-flex mb-2">
-                            <p class="fw-bold">Personal Information</p>
+                            <p class="fw-bold">Contact Form</p>
                         </div>
 
-                         <form class="row" method="POST">
-    <input type="hidden" name="bank_id" id="bank_id"> <!-- Hidden input for bank ID -->
+                        <form class="row" method="POST">
+                                    <input type="hidden" name="bank_id" id="bank_id"> <!-- Hidden input for bank ID -->
 
-    <div class="col-12 mb-2">
-        <p class="text-muted h8">Full Name</p>
-        <input class="form-control" type="text" name="fullname" placeholder="Enter Full Name" required>
-    </div>
-    <div class="col-6">
-        <p class="text-muted h8">Email Address</p>
-        <input class="form-control" type="email" name="email" placeholder="Enter Email" required>
-    </div>
-    <div class="col-6">
-        <p class="text-muted h8">Phone Number</p>
-        <input class="form-control" type="text" name="phone" placeholder="Enter Your Phone Number" required>
-    </div>
-    <div class="col-12 mb-2">
-        <p class="text-muted h8">Amount for Donation</p>
-        <input class="form-control" type="text" name="amount" placeholder="Enter Amount" required>
-    </div>
-    <div class="col-12 mb-2">
-        <button style="background:rgb(0,29,76)" class="btn text-white btn-sm w-25 mt-4" type="submit">Submit</button>
-    </div>
-</form>
+                                    <div class="col-12 mb-2">
+                                        <p class="text-muted h8">State</p>
+                                        <input class="form-control" type="text" name="state" placeholder="Enter Full Name" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="text-muted h8">Complete Address</p>
+                                        <input class="form-control" type="text"  name="address" placeholder="Enter Address" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="text-muted h8">Closest Popular Place</p>
+                                        <input class="form-control" type="text" name="close_place" placeholder="Enter Closest Popular Place" required>
+                                    </div>
+                                    <div class="col-12 mb-2">
+                                        <p class="text-muted h8">Amount for Donation</p>
+                                        <input class="form-control" type="text" value="<?php echo $amount ?>" name="amount"  placeholder="Enter Amount" required>
+                                    </div>
+                                    <div class="col-12 mb-2">
+                                        <p class="text-muted h8">Appointment Date</p>
+                                        <input class="form-control" type="date" name="date"   required>
+                                    </div>
+                                    <div class="col-12 mb-2">
+                                        <button style="background:rgb(0,29,76)" class="btn text-white btn-sm w-25 mt-4" type="submit">Submit</button>
+                                    </div>
+                        </form>
 
                     </div>
                 </div>
@@ -120,28 +148,20 @@
     let bank_details = [
          {
                   id: 1,
-                  name: 'H.E.O EZIOKWU FOUNDATION NIG LTD',
-                  number: '5070998183',
-                  bank_name: 'ZENITH BANK',
-                  typeOf: 'Nigeira'
+                  name: 'Paul Ugochukwu Nweke',
+                  number: '2292324448',
+                  bank_name: 'United Bank for Africa (UBA)',
+
 
          },
          {
                   id: 2,
-                  name: 'H.E.O EZIOKWU FOUNDATION NIG LTD',
-                  number: '5070998183',
-                  bank_name: 'ZENITH BANK',
-                  typeOf: 'Usa Account'
+                  name: 'Paul Ugochukwu Nweke',
+                  number: '6173953975',
+                  bank_name: 'Fidelity Bank',
 
          },
-         {
-                  id: 0,
-                  name: 'H.E.O EZIOKWU FOUNDATION NIG LTD',
-                  number: '5080241271',
-                  bank_name: 'ZENITH BANK',
-                  typeOf: 'Europe Account'
 
-         }
 ]
 
     function displayAccount() {
@@ -149,7 +169,7 @@
     let accountNumber = document.querySelector('.accountNumber');
     let bankIdInput = document.getElementById('bank_id'); // Get hidden input field
 
-    accountName.innerHTML = `${bank_details[index].name} - ${bank_details[index].typeOf} Account`;
+    accountName.innerHTML = `${bank_details[index].name} - ${bank_details[index].bank_name} Account`;
     accountNumber.innerHTML = `${bank_details[index].number}`;
     bankIdInput.value = bank_details[index].id; // Set bank_id input value
 }

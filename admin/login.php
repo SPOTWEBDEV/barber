@@ -57,8 +57,8 @@
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
   
-  <script src="jquery-3.6.0.min.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
+  <script src="<?php  echo $domain ?>admin/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="<?php  echo $domain ?>admin/assets/js/sweetalert2.all.min.js"></script>
   <!-- Custom notification for demo -->
   <!-- beautify ignore:end -->
 

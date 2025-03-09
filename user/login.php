@@ -107,13 +107,14 @@
 
                             if (! empty($email) && ! empty($pass)) {
                                 $password = md5($pass);
-                                $check_ad = mysqli_query($connection, "SELECT * FROM `User` WHERE `email` = '$email' AND `password` = '$password'");
+                                $check_ad = mysqli_query($connection, "SELECT * FROM `user` WHERE `email` = '$email' AND `password` = '$password'");
 
-                                // echo mysqli_num_rows($check_ad) . '<br> <br>';
-                                // print_r(mysqli_fetch_assoc($check_ad));
+                               
 
                                 if (mysqli_num_rows($check_ad) > 0) {
-                                    $_SESSION['user_login'] = password_hash('ghghghhhfffyjgj', PASSWORD_DEFAULT);
+                                  $row_user = mysqli_fetch_assoc($check_ad);
+
+                                    $_SESSION['user_login'] = $row_user['id'];
                                     echo "<script>
                                 window.location.href = 'index.php';
                               </script>";

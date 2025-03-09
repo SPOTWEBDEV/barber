@@ -1,9 +1,7 @@
 <?php
 
 include '../../../server/connection.php';
-if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
-  echo "<script> window.location.href = 'login.php'</script>";
-}
+include '../../../server/client/auth.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" class="light-style layout-menu-fixed " dir="ltr" data-theme="theme-default" data-assets-path="<?php echo $domain ?>admin/assets/" data-template="vertical-menu-template-free">
@@ -204,7 +202,8 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                   <tbody class="table-border-bottom-0">
                     <?php
 
-                    $sql = mysqli_query($connection, "SELECT * FROM `booking` WHERE `status`='completed'");
+                   
+                    $sql = mysqli_query($connection, "SELECT booking.*, user.fullname, user.email,user.phone FROM booking,user WHERE booking.status='completed' AND user.id='$user_login' ");
                     if (mysqli_num_rows($sql)) {
                       $count = 1;
                       while ($details = mysqli_fetch_assoc($sql)) {
@@ -217,7 +216,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
 
                           <td><?php echo $details['email'] ?></td>
                           <td><?php echo $details['phone'] ?></td>
-                          <td><?php echo $details['created_at'] ?></td>
+                          <td><?php echo $details['appointment_date'] ?></td>
                           <td><?php echo ($details['amount'] == '') ? '0.00' : number_format($details['amount'], 2) ?></td>
                           <td><?php
                               if ($details['status'] == 'success' || $details['status'] == 'approved' || $details['status'] == 'completed' ) {
