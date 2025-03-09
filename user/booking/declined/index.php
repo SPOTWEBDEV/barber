@@ -177,7 +177,7 @@ include '../../../server/client/auth.php';
                     <div class="container-xxl flex-grow-1 container-p-y">
 
                         <h4 class="fw-bold py-3 mb-4">
-                            <span class="text-muted fw-light">Admin /</span>Declined Booking
+                            <span class="text-muted fw-light">User /</span>Declined Booking
                         </h4>
 
                         <!-- Basic Bootstrap Table -->
@@ -195,6 +195,7 @@ include '../../../server/client/auth.php';
                                             <th>Amount</th>
 
                                             <th>Status</th>
+                                            <th>Status Message</th>
 
 
 
@@ -226,6 +227,9 @@ include '../../../server/client/auth.php';
                                                         }
 
                                                         ?>
+                                                    </td>
+                                                    <td>
+                                                        <p><?php echo $details['status_message'] ?></p>
                                                     </td>
 
                                                 </tr>

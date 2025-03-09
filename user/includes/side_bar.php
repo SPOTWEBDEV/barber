@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="<?php echo $domain ?>admin/booking/declined/" class="menu-link">
+                    <a href="<?php echo $domain ?>user/booking/declined/" class="menu-link">
                         <div data-i18n="Without navbar">Declined Booking</div>
                     </a>
                 </li>
