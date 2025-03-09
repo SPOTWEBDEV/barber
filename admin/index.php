@@ -11,17 +11,7 @@ if (!isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
 
 ?>
 <!DOCTYPE html>
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
 
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
 <!-- beautify ignore:start -->
 <html lang="en" class="light-style layout-menu-fixed " dir="ltr" data-theme="theme-default" data-assets-path="assets/" data-template="vertical-menu-template-free">
 
@@ -204,10 +194,9 @@ if (!isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                             $get_all = mysqli_query($connection, "SELECT * FROM `booking`");
                             echo mysqli_num_rows($get_all)
                             ?>
-                          </span> Registered Users And You can manage your website from
-                          the action pane</p>
+                          </span> Pending Bookings and you can manage your website from the action pane</p>
 
-                        <a href="all.php" class="btn btn-sm btn-outline-primary">See Users</a>
+                        <a href="<?php echo $domain ?>admin/book.php" class="btn btn-sm btn-outline-primary">All Booking</a>
                       </div>
                     </div>
                     <div class="col-sm-5 text-center text-sm-left">
@@ -236,7 +225,7 @@ if (!isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                             </div>
                           </div>
                         </div>
-                        <span class="fw-semibold d-block mb-1">BookKeeping</span>
+                        <span class="fw-semibold d-block mb-1">Pending Booking</span>
                         <h3 class="card-title mb-2">
                           <?php
                           $get_all = mysqli_query($connection, "SELECT * FROM `booking`");
@@ -264,7 +253,7 @@ if (!isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                             </div>
                           </div> -->
                         </div>
-                        <span>Total Booking Amount</span>
+                        <span>Completed Booking</span>
                         <h3 class="card-title text-nowrap mb-1">
 
                           <?php

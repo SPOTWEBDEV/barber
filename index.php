@@ -319,11 +319,7 @@ include './server/connection.php';
                             <h2 class="title tg-element-title">A Complete Solution For Global Business</h2>
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-4">
-                        <div class="view-all-btn text-end mb-30">
-                            <a href="project-details.html" class="btn btn-three">See All Projects</a>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
             <div class="container custom-container-three">
@@ -331,28 +327,28 @@ include './server/connection.php';
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div class="project-thumb-three">
-                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/3.jpg" alt=""></a>
+                                <a  href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/3.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div style=""class="project-thumb-three">
-                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/14.jpg" alt=""></a>
+                                <a href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/14.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div class="project-thumb-three">
-                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/7.jpeg" alt=""></a>
+                                <a  href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/7.jpeg" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div class="project-thumb-three">
-                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/5.jpeg" alt=""></a>
+                                <a  href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/5.jpeg" alt=""></a>
                             </div>
                         </div>
                     </div>
