@@ -1,9 +1,9 @@
 <?php
 
 include '../server/connection.php';
-if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
-  echo "<script> window.location.href = 'login.php'</script>";
-}
+include '../server/client/auth.php';
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en" class="light-style layout-menu-fixed " dir="ltr" data-theme="theme-default" data-assets-path="assets/" data-template="vertical-menu-template-free">
@@ -12,7 +12,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title><?php echo $sitename ?>-- Booking History</title>
+  <title><?php echo $sitename ?> -- Booking History</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
@@ -76,7 +76,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
           <div class="container-xxl flex-grow-1 container-p-y">
 
             <h4 class="fw-bold py-3 mb-4">
-              <span class="text-muted fw-light">Admin /</span> Booking
+              <span class="text-muted fw-light">User /</span> Booking
             </h4>
 
             <!-- Basic Bootstrap Table -->
@@ -103,7 +103,9 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                   <tbody class="table-border-bottom-0">
                     <?php
 
-                    $sql = mysqli_query($connection, "SELECT * FROM `booking`");
+                    
+
+                    $sql = mysqli_query($connection, "SELECT booking.*, user.fullname, user.email,user.phone FROM booking,user WHERE user.id='$user_login' ");
                     if (mysqli_num_rows($sql)) {
                       $count = 1;
                       while ($details = mysqli_fetch_assoc($sql)) {
@@ -117,7 +119,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                           <td><?php echo $details['email'] ?></td>
                           <td><?php echo $details['phone'] ?></td>
                           <td><?php echo $details['address'] ?></td>
-                          <td><?php echo $details['date'] ?></td>
+                          <td><?php echo $details['appointment_date'] ?></td>
                           <td><?php echo ($details['amount'] == '') ? '0.00' : number_format($details['amount'], 2) ?></td>
                           <td><?php
 
