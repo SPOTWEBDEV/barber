@@ -1,9 +1,9 @@
 <?php
 
-include '../../../server/connection.php';
-if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
-  echo "<script> window.location.href = 'login.php'</script>";
-}
+    include '../../../server/connection.php';
+    if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
+        echo "<script> window.location.href = 'login.php'</script>";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en" class="light-style layout-menu-fixed " dir="ltr" data-theme="theme-default" data-assets-path="<?php echo $domain ?>admin/assets/" data-template="vertical-menu-template-free">
@@ -47,8 +47,8 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
   <script src="<?php echo $domain ?>admin/assets/js/config.js"></script>
 
   <!-- beautify ignore:end -->
-  <script src="<?php  echo $domain ?>admin/assets/js/jquery-3.6.0.min.js"></script>
-  <script src="<?php  echo $domain ?>admin/assets/js/sweetalert2.all.min.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/js/sweetalert2.all.min.js"></script>
 
 </head>
 
@@ -59,7 +59,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
     <div class="layout-container">
 
       <!-- Menu -->
-      <?php include '../../includes/side_bar.php' ?>
+      <?php include '../../includes/side_bar.php'?>
       <!-- / Menu -->
 
       <!-- Layout container -->
@@ -204,15 +204,14 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                   <tbody class="table-border-bottom-0">
                     <?php
 
-                   
-                    $sql = mysqli_query($connection, "SELECT booking.*,user.fullname,user.email,user.phone FROM booking,user WHERE booking.status ='pending' and booking.user=user.id");
+                        $sql = mysqli_query($connection, "SELECT booking.*,user.fullname,user.email,user.phone FROM booking,user WHERE booking.status ='pending' and booking.user=user.id");
 
-                    if (mysqli_num_rows($sql)) {
-                      $count = 1;
-                      while ($details = mysqli_fetch_assoc($sql)) {
+                        if (mysqli_num_rows($sql)) {
+                            $count = 1;
+                            while ($details = mysqli_fetch_assoc($sql)) {
 
-                        $id = $details['id'];
-                    ?>
+                                $id = $details['id'];
+                            ?>
                         <tr>
                           <td><?php echo $count ?></td>
                           <td><?php echo $details['fullname'] ?></td>
@@ -220,43 +219,43 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                           <td><?php echo $details['email'] ?></td>
                           <td><?php echo $details['phone'] ?></td>
                           <td><?php echo $details['created_at'] ?></td>
-                          <td><?php echo ($details['amount'] == '') ? '0.00' : number_format($details['amount'], 2) ?></td>
+                          <td><?php echo($details['amount'] == '') ? '0.00' : number_format($details['amount'], 2) ?></td>
                           <td><?php
 
-                              if ($details['status'] == 'pending' || $details['status'] == 'ongoing') {
-                                echo "<span class='badge bg-danger'>Pending</span>";
-                              }
-                              if ($details['status'] == 'cancelled' || $details['status'] == 'declined' || $details['status'] == 'failed' || $details['status'] == 'abandoned') {
-                                echo "<span class='badge bg-warning'>Declined</span>";
-                              }
-                              if ($details['status'] == 'success' || $details['status'] == 'approved') {
-                                echo "<span class='badge bg-success'>Success</span>";
-                              }
-                              ?>
+                                          if ($details['status'] == 'pending' || $details['status'] == 'ongoing') {
+                                              echo "<span class='badge bg-danger'>Pending</span>";
+                                          }
+                                          if ($details['status'] == 'cancelled' || $details['status'] == 'declined' || $details['status'] == 'failed' || $details['status'] == 'abandoned') {
+                                              echo "<span class='badge bg-warning'>Declined</span>";
+                                          }
+                                          if ($details['status'] == 'success' || $details['status'] == 'approved') {
+                                              echo "<span class='badge bg-success'>Success</span>";
+                                          }
+                                      ?>
                           </td>
 
                           <td>
                             <?php
 
-                            if ($details['status'] == 'pending' || $details['status'] == 'ongoing') {
-                              echo "<a  href='?app_id=$id'><span  class='badge bg-primary'>click to approved</span></a>";
-                              echo '<br>';
-                              echo "<a  href='?del_id=$id'><span class='badge bg-primary ml-2'>click to declined</span></a>";
-                            } else {
-                              echo '--';
-                            }
+                                        if ($details['status'] == 'pending' || $details['status'] == 'ongoing') {
+                                            echo "<a  href='?app_id=$id'><span  class='badge bg-primary'>click to approved</span></a>";
+                                            echo '<br>';
+                                            echo "<a  href='?del_id=$id'><span class='badge bg-primary ml-2'>click to declined</span></a>";
+                                        } else {
+                                            echo '--';
+                                        }
 
-                            ?>
+                                    ?>
 
                           </td>
 
 
                         </tr>
                     <?php $count++;
-                      }
-                    } else {
-                      echo "<td class='bg-danger text-white' colspan='10'>No Pending Booking</td>";
-                    } ?>
+                            }
+                        } else {
+                            echo "<td class='bg-danger text-white' colspan='10'>No Pending Booking</td>";
+                    }?>
                   </tbody>
                 </table>
               </div>
@@ -284,32 +283,54 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
 
   <?php
 
-  if (isset($_GET['app_id'])) {
-    $app_id      = mysqli_real_escape_string($connection, $_GET['app_id']);
-    $updateQuery = "UPDATE `donations` SET `status`='approved', `updated_at`=NOW() WHERE `id`='$app_id'";
-    mysqli_query($connection, $updateQuery);
-    echo "<script>alert('Donation Approved!');;</script>";
-  }
+      if (isset($_GET['app_id'])) {
+          $app_id      = mysqli_real_escape_string($connection, $_GET['app_id']);
+          $updateQuery = "UPDATE `booking` SET `status`='approved', `updated_at`=NOW() WHERE `id`='$app_id'";
+          mysqli_query($connection, $updateQuery);
+          echo "<script>alert('Booking Approved!');;</script>";
+      }
 
-  if (isset($_GET['del_id'])) {
-    $del_id      = mysqli_real_escape_string($connection, $_GET['del_id']);
-    $updateQuery = "UPDATE `donations` SET `status`='declined', `updated_at`=NOW() WHERE `id`='$del_id'";
-    mysqli_query($connection, $updateQuery);
-    echo "<script>alert('Donation Declined!');</script>";
-  }
+  ?>
 
+  <?php
+      if (isset($_GET['del_id'])) {
+          $del_id = mysqli_real_escape_string($connection, $_GET['del_id']);
+
+          echo "<script>
+        let reason = prompt('Why do you want to decline this booking?');
+        if (reason) {
+            window.location.href = 'index.php?del_id=$del_id&reason=' + encodeURIComponent(reason);
+        }
+    </script>";
+      }
+
+      if (isset($_GET['del_id']) && isset($_GET['reason'])) {
+          $del_id = mysqli_real_escape_string($connection, $_GET['del_id']);
+          $reason = mysqli_real_escape_string($connection, $_GET['reason']);
+
+          $updateQuery =  mysqli_query($connection,"UPDATE `booking` SET `status`='declined', `status_message`='$reason' WHERE `id`='$del_id'");
+
+          if($updateQuery){
+           echo "<script>
+           alert('Booking Declined!');
+            setTimeout(()=>{
+            window.location.href = 'index.php'
+                
+          },2000)
+           </script>";
+          }
+
+          
+      }
   ?>
 
 
 
 
-  <!-- <div class="buy-now">
-    <a href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/" target="_blank" class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
-  </div> -->
 
 
   <!-- Core JS -->
-  <!-- build:js <?php echo $domain ?>admin/assets/vendor/js/core.js -->
+  <!-- build:js                <?php echo $domain ?>admin/assets/vendor/js/core.js -->
   <script src="<?php echo $domain ?>admin/assets/vendor/libs/jquery/jquery.js"></script>
   <script src="<?php echo $domain ?>admin/assets/vendor/libs/popper/popper.js"></script>
   <script src="<?php echo $domain ?>admin/assets/vendor/js/bootstrap.js"></script>
