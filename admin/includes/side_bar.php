@@ -49,17 +49,17 @@
 
 
         <li class="menu-item">
-            <a href="<?php echo $domain ?>admin/event.php" class="menu-link">
+            <a href="<?php echo $domain ?>admin/pricing.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Add Event</div>
+                <div data-i18n="Analytics">Add Babering Pricing</div>
             </a>
         </li>
 
 
         <li class="menu-item">
-            <a href="<?php echo $domain ?>admin/events.php" class="menu-link">
+            <a href="<?php echo $domain ?>admin/pricing_list.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Event List</div>
+                <div data-i18n="Analytics">Babering Pricing List</div>
             </a>
         </li>
 

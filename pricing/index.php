@@ -1,6 +1,6 @@
 <?php
 
-include '../server/connection.php';
+    include '../server/connection.php';
 
 ?>
 
@@ -46,7 +46,7 @@ include '../server/connection.php';
     </div>
     <!-- preloader-end -->
 
-    <?php include '../include/navbar.php' ?>
+    <?php include '../include/navbar.php'?>
 
 
     <!-- main-area -->
@@ -102,81 +102,50 @@ include '../server/connection.php';
                 <div class="pricing-item-wrap">
 
                     <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 col-sm-10">
+                        <?php
+
+                            $select = mysqli_query($connection, "SELECT * FROM `pricing_plans`");
+                            if (mysqli_num_rows($select)) {
+                            while ($row = mysqli_fetch_assoc($select)) {?>
+
+                              <div class="col-lg-4 col-md-6 col-sm-10">
                             <div class="pricing-box-three">
                                 <div class="pricing-icon">
                                     <i class="flaticon-scissors"></i>
                                 </div>
                                 <div class="pricing-plan">
-                                    <h4 class="title">Basic Haircut</h4>
+                                    <h4 class="title"><?php echo $row['title'] ?></h4>
                                 </div>
                                 <div class="pricing-price-two">
-                                    <h2 class="price"><strong>₦</strong>2,500<span>/session</span></h2>
+                                    <h2 class="price"><strong>₦</strong><?php echo number_format($row['price'], 2) ?><span>/session</span></h2>
                                 </div>
                                 <div class="pricing-list">
                                     <ul class="list-wrap">
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Standard Haircut</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Beard Trim</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Basic Styling</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">No Hidden Charges</li>
+                                        <?php
+                                            $features = explode(',', $row['features']);
+                                                    foreach ($features as $feature) {
+                                                        echo '<li><img src="' . $domain . 'assets/img/icons/check_icon03.svg" alt="">' . htmlspecialchars($feature) . '</li>';
+                                                    }
+                                                ?>
+
                                     </ul>
                                 </div>
                                 <div class="pricing-btn-two">
-                                    <a href="<?php  echo $domain ?>payment/" class="btn transparent-btn-two">Book Now</a>
+                                    <a href="<?php echo $domain ?>payment/?babering=<?php echo $row['id'] ?>" class="btn transparent-btn-two">Book Now</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-10">
-                            <div class="pricing-box-three">
-                                <div class="pricing-icon">
-                                    <i class="flaticon-razor"></i>
-                                </div>
-                                <div class="pricing-plan">
-                                    <h4 class="title">Premium Grooming</h4>
-                                </div>
-                                <div class="pricing-price-two">
-                                    <h2 class="price"><strong>₦</strong>5,000<span>/session</span></h2>
-                                </div>
-                                <div class="pricing-list">
-                                    <ul class="list-wrap">
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Classic Haircut</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Beard Shaping</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Scalp Treatment</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Facial Scrub</li>
-                                    </ul>
-                                </div>
-                                <div class="pricing-btn-two">
-                                    <a href="<?php  echo $domain ?>payment/" class="btn transparent-btn-two">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
+                            <?php }
 
-                        <div class="col-lg-4 col-md-6 col-sm-10">
-                            <div class="pricing-box-three">
-                                <div class="pricing-icon">
-                                    <i class="flaticon-hair-dryer"></i>
-                                </div>
-                                <div class="pricing-plan">
-                                    <h4 class="title">Luxury Package</h4>
-                                </div>
-                                <div class="pricing-price-two">
-                                    <h2 class="price"><strong>₦</strong>10,000<span>/session</span></h2>
-                                </div>
-                                <div class="pricing-list">
-                                    <ul class="list-wrap">
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Custom Haircut</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Hot Towel Shave</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Deluxe Scalp Massage</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Beard & Hair Styling</li>
-                                        <li><img src="<?php echo $domain ?>assets/img/icons/check_icon03.svg" alt="">Premium Hair Products</li>
-                                    </ul>
-                                </div>
-                                <div class="pricing-btn-two">
-                                    <a href="<?php  echo $domain ?>payment/" class="btn transparent-btn-two">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
+                            } else {?>
+
+                         <p>Could not fetch babering pricing list</p>
+
+                       <?php }?>
+
+
+
                     </div>
 
                 </div>
@@ -190,7 +159,7 @@ include '../server/connection.php';
 
 
     <!-- footer-area -->
-    <?php include '../include/footer.php' ?>
+    <?php include '../include/footer.php'?>
     <!-- footer-area-end -->
 
 

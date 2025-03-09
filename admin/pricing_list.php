@@ -9,7 +9,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Create Event --                                                                         <?php echo $sitename ?>
+  <title>Create Event --                                                                                                                         <?php echo $sitename ?>
 </title>
 
   <!-- Favicon -->
@@ -196,72 +196,35 @@
               <div class="col-xl">
                 <div class="card mb-4">
                   <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Create Event</h5> <small class="text-muted float-end"></small>
+                    <h5 class="mb-0">Pricing Plans</h5> <small class="text-muted float-end"></small>
                   </div>
                   <div class="card-body">
+                      <table class="table">
+                          <thead>
+                              <tr>
+                                  <th>ID</th>
+                                  <th>Title</th>
+                                  <th>Price</th>
+                                  
+                                  <th>Features</th>
+                              </tr>
+                          </thead>
+                          <tbody class="table-border-bottom-0">
+                              <?php
+                                  $result = mysqli_query($connection, "SELECT * FROM pricing_plans ORDER BY id DESC");
+                                  while ($row = mysqli_fetch_assoc($result)) {
+                                      echo "<tr>
+                                          <td>{$row['id']}</td>
+                                          <td>{$row['title']}</td>
+                                          <td>\${$row['price']}</td>
+                                          
+                                          <td>{$row['features']}</td>
+                                        </tr>";
+                                  }
+                              ?>
+                          </tbody>
+                      </table>
 
-
-                   <div class="container">
-        <h2>Add New Pricing Plan</h2>
-        <form method="POST">
-            <div class="mb-3">
-                <label class="form-label">Title</label>
-                <input type="text" class="form-control" name="title" required>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Price</label>
-                <input type="number" class="form-control" name="price" required>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Session</label>
-                <input type="text" class="form-control" name="session" required>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Icon Class (FontAwesome, etc.)</label>
-                <input type="text" class="form-control" name="icon_class" required>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Features (Comma-separated)</label>
-                <textarea class="form-control" name="features" required></textarea>
-            </div>
-
-            <button type="submit" name="insert_pricing" class="btn btn-primary">Add Pricing Plan</button>
-        </form>
-
-        <!-- Pricing Plans Table -->
-        <h3 class="mt-5">Pricing Plans</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Price</th>
-                    <th>Session</th>
-                    <th>Icon Class</th>
-                    <th>Features</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    $result = mysqli_query($connection, "SELECT * FROM pricing_plans ORDER BY id DESC");
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>
-                            <td>{$row['id']}</td>
-                            <td>{$row['title']}</td>
-                            <td>\${$row['price']}</td>
-                            <td>{$row['session']}</td>
-                            <td>{$row['icon_class']}</td>
-                            <td>{$row['features']}</td>
-                          </tr>";
-                    }
-                ?>
-            </tbody>
-        </table>
-    </div>
 
 
 
