@@ -1,5 +1,5 @@
 <?php
-    include '../server/connection.php';
+include '../server/connection.php';
 ?>
 
 
@@ -58,7 +58,7 @@
   </script>
 
   <script src="jquery-3.6.0.min.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
+  <script src="sweetalert2.all.min.js"></script>
   <!-- Custom notification for demo -->
   <!-- beautify ignore:end -->
 
@@ -99,36 +99,36 @@
                   </div>
                   <div class="card-body">
                     <?php
-                        if (isset($_POST['proceed'])) {
-                            $email = mysqli_real_escape_string($connection, $_POST['email']);
-                            $pass  = mysqli_real_escape_string($connection, $_POST['pass']);
+                    if (isset($_POST['proceed'])) {
+                      $email = mysqli_real_escape_string($connection, $_POST['email']);
+                      $pass  = mysqli_real_escape_string($connection, $_POST['pass']);
 
-                            
 
-                            if (! empty($email) && ! empty($pass)) {
-                                $password = md5($pass);
-                                $check_ad = mysqli_query($connection, "SELECT * FROM `user` WHERE `email` = '$email' AND `password` = '$password'");
 
-                               
+                      if (! empty($email) && ! empty($pass)) {
+                        $password = md5($pass);
+                        $check_ad = mysqli_query($connection, "SELECT * FROM `user` WHERE `email` = '$email' AND `password` = '$password'");
 
-                                if (mysqli_num_rows($check_ad) > 0) {
-                                  $row_user = mysqli_fetch_assoc($check_ad);
 
-                                    $_SESSION['user_login'] = $row_user['id'];
-                                    echo "<script>
+
+                        if (mysqli_num_rows($check_ad) > 0) {
+                          $row_user = mysqli_fetch_assoc($check_ad);
+
+                          $_SESSION['user_login'] = $row_user['id'];
+                          echo "<script>
                                 window.location.href = 'index.php';
                               </script>";
-                                } else {
-                                    echo "<script>
+                        } else {
+                          echo "<script>
                                   Swal.fire('Error','INCORRECT LOGIN DETAILS','error')
                                 </script>";
-                                }
-                            } else {
-                                echo "<script>
+                        }
+                      } else {
+                        echo "<script>
                               Swal.fire('warning','YOUR INPUT IS EMPTY','warning')
                             </script>";
-                            }
-                        }
+                      }
+                    }
 
                     ?>
                     <form method="POST">
@@ -140,7 +140,12 @@
                         <label class="form-label" for="basic-default-company">Password</label>
                         <input type="password" class="form-control" name="pass" id="basic-default-company" placeholder="Who Knows" />
                       </div>
-                     
+                      <div class="mb-3">
+                        <i>Don't have an account? </i><a href="<?php echo $domain ?>user/register.php"> Register</a>
+                      </div>
+
+
+
                       <button type="submit" class="btn btn-primary" name="proceed">LOGIN</button>
                     </form>
                   </div>
