@@ -96,7 +96,7 @@ include './server/connection.php';
                                                 </div>
                                                 <div class="content">
                                                     <span>Hot Line Number</span>
-                                                    <a href="tel:0123456789">+123 8989 444</a>
+                                                    <a href="tel:<?php echo $sitephone ?>"><?php echo $sitephone ?></a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -120,15 +120,7 @@ include './server/connection.php';
                                     <div class="menu-outer">
                                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                                     </div>
-                                    <div class="social-links">
-                                        <ul class="clearfix list-wrap">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                        </ul>
-                                    </div>
+                                   
                                 </nav>
                             </div>
                             <div class="menu-backdrop"></div>
