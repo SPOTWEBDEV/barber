@@ -1,6 +1,6 @@
 <?php
 
-include('./server/connection.php');
+include './server/connection.php';
 
 ?>
 
@@ -9,12 +9,12 @@ include('./server/connection.php');
 <!doctype html>
 <html class="no-js" lang="en">
 
-<!-- Mirrored from themedox.com/demo/gerow/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2025 22:55:01 GMT -->
+
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Gerow - Business Consulting HTML Template</title>
+    <title><?php echo $sitename ?></title>
     <meta name="description" content="Gerow - Business Consulting HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -63,8 +63,8 @@ include('./server/connection.php');
                     <div class="col-lg-7 col-md-9 order-0 order-lg-2">
                         <div class="banner-img-three" data-aos="fade-left" data-aos-delay="300">
                             <img height="500" src="<?php echo $domain ?>assets/img/work/1.jpg" alt="" class="main-img">
-                            
-                            
+
+
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -88,7 +88,7 @@ include('./server/connection.php');
 
 
 
-        
+
 
         <!-- about-area -->
         <section class="about-area-four pb-120">
@@ -97,7 +97,7 @@ include('./server/connection.php');
                     <div class="col-lg-7 col-md-10 order-0 order-lg-2">
                         <div class="about-img-wrap-four">
                             <div class="mask-img-wrap">
-                                <img  src="<?php echo $domain ?>assets/img/work/1.jpg" alt="">
+                                <img src="<?php echo $domain ?>assets/img/work/1.jpg" alt="">
                             </div>
                             <div class="icon"><i class="flaticon-business-presentation"></i></div>
                             <!-- <img src="<?php echo $domain ?>assets/img/images/h3_about_img02.jpg" alt="" class="img-two"> -->
@@ -119,7 +119,7 @@ include('./server/connection.php');
                             <p>At *Go Fine Cutz*, we don’t just cut hair—we craft styles that leave lasting impressions. Whether you’re looking for a clean professional look, a trendy fade, or a sharp beard lineup, our team delivers with precision and artistry. </p>
 
                             <p>Our dedication to quality service and client satisfaction has made us a trusted name in the barbering industry. We take pride in our craft and in the relationships we build with our customers, ensuring they always leave with a look they love. </p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ include('./server/connection.php');
                             <div class="mask-img-two">
                                 <img src="<?php echo $domain ?>assets/img/work/3.jpg" alt="">
                             </div>
-                            
+
                             <div class="overview-shape-wrap">
                                 <img src="<?php echo $domain ?>assets/img/images/h3_overview_shape01.png" alt="">
                                 <img src="<?php echo $domain ?>assets/img/images/h3_overview_shape02.png" alt="">
@@ -152,7 +152,7 @@ include('./server/connection.php');
                             <p>Our mission at *Go Fine Cutz* is to redefine the art of grooming by offering top-quality haircuts, beard trims, and styling services tailored to every individual. We believe that a great haircut is more than just aesthetics—it’s about boosting confidence and making a lasting impression. </p>
 
                             <p>We strive to create an environment where every client feels valued, comfortable, and satisfied with their look. Our team is committed to continuous learning, ensuring we stay ahead of the latest trends and techniques in men’s grooming. Excellence is at the heart of everything we do.</p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -182,28 +182,28 @@ include('./server/connection.php');
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div class="project-thumb-three">
-                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/project/h3_project_img01.jpg" alt=""></a>
+                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/3.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="project-item-three">
+                            <div style=""class="project-thumb-three">
+                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/14.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div class="project-thumb-three">
-                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/project/h3_project_img02.jpg" alt=""></a>
+                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/7.jpeg" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div class="project-thumb-three">
-                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/project/h3_project_img03.jpg" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="project-item-three">
-                            <div class="project-thumb-three">
-                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/project/h3_project_img04.jpg" alt=""></a>
+                                <a href="project-details.html"><img src="<?php echo $domain ?>assets/img/work/5.jpeg" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -219,32 +219,33 @@ include('./server/connection.php');
                     <div class="row justify-content-center">
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="counter-item-two">
-                                <h2 class="count"><span class="odometer" data-count="95"></span>%</h2>
-                                <p>Success Rate</p>
+                                <h2 class="count"><span class="odometer" data-count="98"></span>%</h2>
+                                <p>Customer Satisfaction</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="counter-item-two">
-                                <h2 class="count"><span class="odometer" data-count="55"></span>k</h2>
-                                <p>Complete Projects</p>
+                                <h2 class="count"><span class="odometer" data-count="30"></span>k</h2>
+                                <p>Haircuts Delivered</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="counter-item-two">
-                                <h2 class="count"><span class="odometer" data-count="25"></span>k</h2>
-                                <p>Satisfied Clients</p>
+                                <h2 class="count"><span class="odometer" data-count="246"></span></h2>
+                                <p>Happy Clients</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="counter-item-two">
-                                <h2 class="count"><span class="odometer" data-count="15"></span>k</h2>
-                                <p>Trade In The World</p>
+                                <h2 class="count"><span class="odometer" data-count="5"></span>+</h2>
+                                <p>Years of Experience</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- counter-area-end -->
 
 
@@ -255,7 +256,7 @@ include('./server/connection.php');
                 <div class="row g-0 align-items-end">
                     <div class="col-37">
                         <div class="testimonial-img-three">
-                            <img src="<?php echo $domain ?>assets/img/images/h3_testimonial_img.jpg" alt="">
+                            <img src="<?php echo $domain ?>assets/img/work/12.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-63">
@@ -270,7 +271,7 @@ include('./server/connection.php');
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                         </div>
-                                        <p>“ Elite Cuts is hands down the best barbershop I’ve ever been to. The barbers are skilled, professional, and really take the time to perfect every cut. I always leave feeling fresh and confident!</p>
+                                        <p>“ <?php echo $sitename ?>s is hands down the best barbershop I’ve ever been to. The barbers are skilled, professional, and really take the time to perfect every cut. I always leave feeling fresh and confident!</p>
                                         <div class="testimonial-info">
                                             <h2 class="title">Eze Micheal</h2>
                                             <span>Student Of ESUT</span>
@@ -286,7 +287,7 @@ include('./server/connection.php');
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                         </div>
-                                        <p>“ I love the atmosphere at Elite Cuts. The team is friendly, and the service is top-notch. Whether I’m getting a fade or a beard trim, I know I’m in good hands!</p>
+                                        <p>“ I love the atmosphere at <?php echo $sitename ?>s. The team is friendly, and the service is top-notch. Whether I’m getting a fade or a beard trim, I know I’m in good hands!</p>
                                         <div class="testimonial-info">
                                             <h2 class="title">Daniel K.</h2>
                                             <span>Student Of ESUT</span>
@@ -331,16 +332,16 @@ include('./server/connection.php');
                                     </div>
                                     <div class="content">
                                         <span>Call For More Info</span>
-                                        <a href="tel:0123456789">+123 8989 444</a>
+                                        <a href="tel:0123456789"><?php echo $sitephone?></a>
                                     </div>
                                 </div>
                                 <h2 class="title">Let’s Request a Schedule For Free Consultation</h2>
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <div class="cta-btn text-end">
-                                <a href="contact.html" class="btn btn-three">Contact Us</a>
-                            </div>
+                            <!-- <div class="cta-btn text-end">
+                                <a href="<?php echo $domain ?>contact" class="btn btn-three">Contact Us</a>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -348,14 +349,14 @@ include('./server/connection.php');
         </section>
         <!-- cta-area-end -->
 
-     
+
 
     </main>
     <!-- main-area-end -->
 
 
     <!-- footer-area -->
-      <?php include('./include/footer.php') ?>
+    <?php include './include/footer.php' ?>
     <!-- footer-area-end -->
 
 

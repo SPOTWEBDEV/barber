@@ -10,7 +10,7 @@ include('../server/connection.php');
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Gerow - Business Consulting HTML Template</title>
+    <title><?php echo $sitename ?></title>
     <meta name="description" content="Gerow - Business Consulting HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -59,7 +59,7 @@ include('../server/connection.php');
     <main class="fix">
 
         <!-- breadcrumb-area -->
-        <section class="breadcrumb-area breadcrumb-bg" data-background="<?php echo $domain ?>assets/img/bg/breadcrumb_bg.jpg">
+        <section class="breadcrumb-area breadcrumb-bg" data-background="<?php echo $domain ?>assets/img/work/13.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -107,12 +107,12 @@ include('../server/connection.php');
                     <div class="col-lg-7">
                         <div class="team-details-content">
                             <h2 class="title">Leslie Alexander</h2>
-                            <span>Finance Advisor</span>
+                            <span>CEO <?php echo $sitename  ?></span>
                             <p>Our work speaks for itself! From modern fades to classic cuts, we have mastered the art of grooming to suit all styles and personalities. Our portfolio showcases our expertise in precision haircuts, detailed beard trims, and stylish designs. </p>
                             <div class="team-skill-wrap">
                                 <h3 class="title-two">My Expertise & Skills</h3>
                                 <p>We take pride in every cut, ensuring sharp lines, smooth fades, and flawless finishing. Whether it’s a professional corporate style or a bold creative look, our clients trust us to bring their vision to life. </p>
-                                <p>Visit our gallery to see some of our best transformations. At *Elite Cuts*, every haircut is a masterpiece, and we’re ready to create your next signature look!</p>
+                                <p>Visit our gallery to see some of our best transformations. At *<?php  echo $sitename ?>s*, every haircut is a masterpiece, and we’re ready to create your next signature look!</p>
                                
                                
                                 <div class="col-12 mt-4">

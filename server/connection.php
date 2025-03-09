@@ -29,10 +29,10 @@ define("HOST", "localhost");
 
 // Set configurations based on protocol
 if ($request == 'https') {
-    $domain = "https://fusionsassets.com/";
-    define("USER", "tifkvkth_crypto");
-    define("PASSWORD", "tifkvkth_crypto");
-    define("DATABASE", "tifkvkth_crypto");
+    $domain = "https://gofinecutz.com.ng/";
+    define("USER", "pdicsrdj_barber");
+    define("PASSWORD", "pdicsrdj_barber");
+    define("DATABASE", "pdicsrdj_barber");
 }
 elseif ($request == 'http') {
     $domain = "http://localhost/barber/";
@@ -57,7 +57,7 @@ $siteemail = "support@gofinecutz.com";
 $emailpassword  = "support@gofinecutz.com";
 $host = 'mail.gofinecutz.com';
 $sitephone  = "09043883343";
-$siteaddress  = "ESUT agbani Enugu State";
+$siteaddress  = "Esut Agbani Enugu State";
 
 
 session_start();
