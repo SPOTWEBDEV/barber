@@ -44,7 +44,7 @@
                     <div class="menu-wrap">
                         <nav class="menu-nav">
                             <div class="logo">
-                                <a href="index.html"><img style="    height: 130px; width: 150px; padding: 10px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
+                                <a href="index.html"><img style="height: 130px; width: 150px; padding: 10px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
                             </div>
                             <div class="navbar-wrap main-menu d-none d-lg-flex">
                                 <ul class="navigation">

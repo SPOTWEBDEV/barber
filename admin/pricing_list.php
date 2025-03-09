@@ -1,31 +1,5 @@
 <?php
     include '../server/connection.php';
-    if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
-        echo "<script> window.location.href = 'login.php'</script>";
-    }
-
-    if (isset($_GET['del_id'])) {
-        // Get the ID from the URL query string
-        $id = $_GET['del_id'];
-
-        // Display an alert with the ID (for debugging)
-        echo "<script>alert('ID: $id')</script>";
-
-        // Sanitize the input to avoid SQL injection
-        $id = mysqli_real_escape_string($connection, $id);
-
-        // Prepare the delete query
-        $delete = mysqli_query($connection, "DELETE FROM services WHERE id = '$id'");
-
-        // Check if the query was successful
-        if ($delete) {
-            // Successful deletion alert
-            echo "<script>alert('Your delete request was successful.'); window.location.href='sevices_list.php';</script>";
-        } else {
-            // If deletion fails, display an error message
-            echo "<script>alert('Error: Could not delete the record.');</script>";
-        }
-    }
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +9,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Event List --                        <?php echo $sitename ?></title>
+  <title>Create Event --                                                                         <?php echo $sitename ?>
+</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
@@ -69,9 +44,21 @@
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="assets/js/config.js"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="async" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  <!-- Custom notification for demo -->
   <!-- beautify ignore:end -->
-  <script src="jquery-3.6.0.min.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
+    <script src="<?php echo $domain ?>admin/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/js/sweetalert2.all.min.js"></script>
 
 </head>
 
@@ -201,92 +188,97 @@
           <div class="container-xxl flex-grow-1 container-p-y">
 
             <h4 class="fw-bold py-3 mb-4">
-              <span class="text-muted fw-light">Admin /</span> Event
+              <span class="text-muted fw-light">Admin /</span> Create Event
             </h4>
 
-            <!-- Basic Bootstrap Table -->
-            <div class="card">
-    <h5 class="card-header">All Events</h5>
-    <div class="table-responsive text-nowrap">
+            <!-- Basic Layout -->
+            <div class="row">
+              <div class="col-xl">
+                <div class="card mb-4">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Create Event</h5> <small class="text-muted float-end"></small>
+                  </div>
+                  <div class="card-body">
+
+
+                   <div class="container">
+        <h2>Add New Pricing Plan</h2>
+        <form method="POST">
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" name="title" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Price</label>
+                <input type="number" class="form-control" name="price" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Session</label>
+                <input type="text" class="form-control" name="session" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Icon Class (FontAwesome, etc.)</label>
+                <input type="text" class="form-control" name="icon_class" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Features (Comma-separated)</label>
+                <textarea class="form-control" name="features" required></textarea>
+            </div>
+
+            <button type="submit" name="insert_pricing" class="btn btn-primary">Add Pricing Plan</button>
+        </form>
+
+        <!-- Pricing Plans Table -->
+        <h3 class="mt-5">Pricing Plans</h3>
         <table class="table">
             <thead>
                 <tr>
-                    <th>S/N</th>
+                    <th>ID</th>
                     <th>Title</th>
-                    <th>Date</th>
-                    <th>Venue</th>
-                    <th>Image</th>
-                    <th>Action</th>
+                    <th>Price</th>
+                    <th>Session</th>
+                    <th>Icon Class</th>
+                    <th>Features</th>
                 </tr>
             </thead>
-            <tbody class="table-border-bottom-0">
+            <tbody>
                 <?php
-                    $sql = mysqli_query($connection, "SELECT * FROM `event` ORDER BY date DESC");
-                    if (mysqli_num_rows($sql) > 0) {
-                        $count = 1;
-                        while ($details = mysqli_fetch_assoc($sql)) {
-                            $id        = $details['id'];
-                            $imagePath = "../upload/event/" . $details['image']; // Assuming images are stored in 'uploads/' directory
-                        ?>
-                        <tr>
-                            <td><?php echo $count; ?></td>
-                            <td><?php echo htmlspecialchars($details['title']); ?></td>
-                            <td><?php echo date("F j, Y", strtotime($details['date'])); ?></td>
-                            <td><?php echo htmlspecialchars($details['venue']); ?></td>
-                            <td>
-                                <img src="<?php echo $imagePath; ?>" alt="Event Image"  height="100" style="border-radius: 5px;">
-                            </td>
-                            <td>
-                                <a onclick="return confirm('Are you sure you want to delete this event?')" href="?del_id=<?php echo $id; ?>">
-                                    <button class="btn btn-danger">Delete</button>
-                                </a>
-                            </td>
-                        </tr>
-                <?php
-                    $count++;
-                        }
-                    } else {
-                        echo "<tr><td class='bg-danger text-white' colspan='6'>No Events Found</td></tr>";
+                    $result = mysqli_query($connection, "SELECT * FROM pricing_plans ORDER BY id DESC");
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>
+                            <td>{$row['id']}</td>
+                            <td>{$row['title']}</td>
+                            <td>\${$row['price']}</td>
+                            <td>{$row['session']}</td>
+                            <td>{$row['icon_class']}</td>
+                            <td>{$row['features']}</td>
+                          </tr>";
                     }
                 ?>
             </tbody>
         </table>
     </div>
-</div>
 
-            <!--/ Basic Bootstrap Table -->
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- Basic form end -->
           <!-- / Content -->
 
 
 
-
-
-
-
-          <!-- Footer -->
-          <!-- <footer class="content-footer footer bg-footer-theme">
-            <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-              <div class="mb-2 mb-md-0">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>
-                , made with ❤️ by <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
-              </div>
-              <div>
-
-                <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                <a href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/" target="_blank" class="footer-link me-4">Documentation</a>
-
-                <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues" target="_blank" class="footer-link me-4">Support</a>
-
-
-              </div>
-            </div>
-          </footer> -->
-          <!-- / Footer -->
           <div class="content-backdrop fade"></div>
         </div>
         <!-- Content wrapper -->
@@ -303,12 +295,6 @@
   </div>
   <!-- / Layout wrapper -->
 
-
-
-
-  <!-- <div class="buy-now">
-    <a href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/" target="_blank" class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
-  </div> -->
 
 
   <!-- Core JS -->

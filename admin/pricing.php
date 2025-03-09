@@ -9,8 +9,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Create Event --                                                  <?php echo $sitename ?>
-</title>
+  <title>Create Event --<?php echo $sitename ?></title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
@@ -57,12 +56,40 @@
   </script>
   <!-- Custom notification for demo -->
   <!-- beautify ignore:end -->
-  <script src="jquery-3.6.0.min.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
+  <script src="<?php  echo $domain ?>admin/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="<?php  echo $domain ?>admin/assets/js/sweetalert2.all.min.js"></script>
 
 </head>
 
 <body>
+
+<?php
+
+
+if (isset($_POST['insert_pricing'])) {
+    // Sanitize user input
+    $title       = mysqli_real_escape_string($connection, $_POST['title']);
+    $price       = mysqli_real_escape_string($connection, $_POST['price']);
+    $features    = mysqli_real_escape_string($connection, $_POST['features']);
+
+    // Insert into the pricing_plans table
+    $insert_query = "INSERT INTO pricing_plans (title, price, features) 
+                     VALUES ('$title', '$price', '$features')";
+    
+    if (mysqli_query($connection, $insert_query)) {
+        echo "<script>
+                Swal.fire('Success', 'Pricing plan added successfully!', 'success');
+              </script>";
+    } else {
+        echo "<script>
+                Swal.fire('Error', 'Failed to add pricing plan', 'error');
+              </script>";
+    }
+}
+?>
+
+
+?>
 
   <!-- Layout wrapper -->
   <div class="layout-wrapper layout-content-navbar  ">
@@ -188,7 +215,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
 
             <h4 class="fw-bold py-3 mb-4">
-              <span class="text-muted fw-light">Admin /</span> Create Event
+              <span class="text-muted fw-light">Admin /</span> Add Pricing
             </h4>
 
             <!-- Basic Layout -->
@@ -196,80 +223,36 @@
               <div class="col-xl">
                 <div class="card mb-4">
                   <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Create Event</h5> <small class="text-muted float-end"></small>
+                    <h5 class="mb-0">Add Pricings</h5> <small class="text-muted float-end"></small>
                   </div>
                   <div class="card-body">
 
-                  <?php
-                      if (isset($_POST['insert_service'])) {
-                          // Database connection (Ensure $connection is defined before this block)
 
-                          // Sanitize form input
-                          $title   = mysqli_real_escape_string($connection, $_POST['title']);
-                          $content = mysqli_real_escape_string($connection, $_POST['content']); // Content with HTML tags
-                          $date    = mysqli_real_escape_string($connection, $_POST['date']);
-                          $venue   = mysqli_real_escape_string($connection, $_POST['venue']);
 
-                          // Handle image upload
-                          $target_dir  = "../upload/event/";
-                          $image_name  = $_FILES["image"]["name"];
-                          $image_tmp   = $_FILES["image"]["tmp_name"];
-                          $image_ext   = pathinfo($image_name, PATHINFO_EXTENSION);
-                          $allowed_ext = ["jpg", "jpeg", "png", "gif"];
 
-                          if (! in_array(strtolower($image_ext), $allowed_ext)) {
-                              echo "<script>alert('Error: Only JPG, JPEG, PNG, and GIF files are allowed.');</script>";
-                          } else {
-                              $new_image_name = time() . "_" . basename($image_name);
-                              $target_file    = $target_dir . $new_image_name;
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label class="form-label">Title</label>
+                            <input type="text" class="form-control" name="title" required>
+                        </div>
 
-                              if (move_uploaded_file($image_tmp, $target_file)) {
-                                  // Insert into database
-                                  $insert_service = mysqli_query($connection,
-                                      "INSERT INTO event (title, write_up, date, venue, image)
-                 VALUES ('$title', '$content', '$date', '$venue', '$new_image_name')"
-                                  );
+                        <div class="mb-3">
+                            <label class="form-label">Price</label>
+                            <input type="number" class="form-control" name="price" required>
+                        </div>
 
-                                  if ($insert_service) {
-                                      echo "<script>alert('Service Created => Your service has been successfully created');</script>";
-                                  } else {
-                                      echo "<script>alert('Error => Failed to create service');</script>";
-                                  }
-                              } else {
-                                  echo "<script>alert('Error: Failed to upload image.');</script>";
-                              }
-                          }
-                      }
-                  ?>
+                        
 
-<form method="POST" id="service-form" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label class="form-label" for="basic-default-title">Event Title</label>
-        <input type="text" class="form-control" name="title" id="basic-default-title" placeholder="Enter Service Title" required />
-    </div>
+                        <div class="mb-3">
+                            <label class="form-label">Features (Comma-separated)</label>
+                            <textarea class="form-control" name="features" required></textarea>
+                        </div>
 
-    <div class="mb-3">
-        <label class="form-label" for="basic-default-content">Event Content</label>
-        <textarea class="form-control" name="content" id="basic-default-content" rows="5" placeholder="Enter service content (HTML allowed)" ></textarea>
-    </div>
+                        <button type="submit" name="insert_pricing" class="btn btn-primary">Add Pricing Plan</button>
+                    </form>
 
-    <div class="mb-3">
-        <label class="form-label" for="basic-default-date">Event Date</label>
-        <input type="date" class="form-control" name="date" id="basic-default-date" required />
-    </div>
 
-    <div class="mb-3">
-        <label class="form-label" for="basic-default-venue">Event Venue</label>
-        <input type="text" class="form-control" name="venue" id="basic-default-venue" placeholder="Enter Event Venue" required />
-    </div>
-
-    <div class="mb-3">
-        <label class="form-label" for="basic-default-image">Event Image</label>
-        <input type="file" class="form-control" name="image" id="basic-default-image" accept="image/*" required />
-    </div>
-
-    <button type="submit" class="btn btn-primary" name="insert_service">INSERT SERVICE</button>
-</form>
+                  </div>
 
 
 
@@ -303,12 +286,6 @@
   </div>
   <!-- / Layout wrapper -->
 
-
-
-
-  <!-- <div class="buy-now">
-    <a href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/" target="_blank" class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
-  </div> -->
 
 
   <!-- Core JS -->

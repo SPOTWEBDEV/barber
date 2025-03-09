@@ -122,7 +122,7 @@ include '../server/connection.php';
                                     </ul>
                                 </div>
                                 <div class="pricing-btn-two">
-                                    <a href="contact.html" class="btn transparent-btn-two">Book Now</a>
+                                    <a href="<?php  echo $domain ?>payment/" class="btn transparent-btn-two">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ include '../server/connection.php';
                                     </ul>
                                 </div>
                                 <div class="pricing-btn-two">
-                                    <a href="contact.html" class="btn transparent-btn-two">Book Now</a>
+                                    <a href="<?php  echo $domain ?>payment/" class="btn transparent-btn-two">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +173,7 @@ include '../server/connection.php';
                                     </ul>
                                 </div>
                                 <div class="pricing-btn-two">
-                                    <a href="contact.html" class="btn transparent-btn-two">Book Now</a>
+                                    <a href="<?php  echo $domain ?>payment/" class="btn transparent-btn-two">Book Now</a>
                                 </div>
                             </div>
                         </div>
