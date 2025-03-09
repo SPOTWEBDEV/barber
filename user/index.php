@@ -75,7 +75,7 @@ include('../server/client/auth.php');
 
 
       <!-- Menu -->
-      <?php include('includes/side_bar.php') ?>
+      <?php include('./includes/side_bar.php') ?>
       <!-- / Menu -->
 
       <!-- Layout container -->
@@ -109,8 +109,8 @@ include('../server/client/auth.php');
               <!-- User -->
               <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                  <div class="d-none avatar avatar-online">
-                    <img  src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                  <div class="avatar avatar-online">
+                    <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -183,7 +183,7 @@ include('../server/client/auth.php');
                         <h5 class="card-title text-primary">Welcome to Your Dashboard</h5>
                         <p class="mb-4">You have <span class="fw-bold">
                             <?php
-                            $get_all = mysqli_query($connection, "SELECT * FROM `event`");
+                            $get_all = mysqli_query($connection, "SELECT * FROM `booking`");
                             echo mysqli_num_rows($get_all)
                             ?>
                           </span> Registered Users And You can manage your website from
@@ -250,7 +250,7 @@ include('../server/client/auth.php');
                         <h3 class="card-title text-nowrap mb-1">
 
                           <?php
-                          $get_all = mysqli_query($connection, "SELECT sum(amount) as total FROM `booking`");
+                          $get_all = mysqli_query($connection, "SELECT sum(amount) as total FROM booking");
                           $row =  mysqli_fetch_assoc($get_all);
                           echo number_format($row['total']) ?? 0;
                           ?>
