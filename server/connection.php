@@ -56,8 +56,8 @@ $sitename = "Gofinecutz";
 $siteemail = "support@gofinecutz.com";
 $emailpassword  = "support@gofinecutz.com";
 $host = 'mail.gofinecutz.com';
-$sitephone  = "07443961597";
-$siteaddress  = "At Caversham Houses, 18 kingston Gardens Beddington Surrey Cro 4tx";
+$sitephone  = "09043883343";
+$siteaddress  = "ESUT agbani Enugu State";
 
 
 session_start();
