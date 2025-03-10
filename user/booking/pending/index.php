@@ -97,7 +97,7 @@ include '../../../server/client/auth.php';
 
               <!-- Place this tag where you want the button to render. -->
               <li class="nav-item lh-1 me-3">
-                <a class="github-button" href="https://github.com/themeselection/sneat-html-admin-template-free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
+               
               </li>
 
 
@@ -147,7 +147,7 @@ include '../../../server/client/auth.php';
                   <tbody class="table-border-bottom-0">
                     <?php
 
-                    $sql = mysqli_query($connection, "SELECT booking.*, user.fullname, user.email,user.phone FROM booking,user WHERE booking.status='pending' AND user.id='$user_login' ");
+                    $sql = mysqli_query($connection, "SELECT booking.*, user.fullname, user.email,user.phone FROM booking,user WHERE booking.status='pending' AND user.id='$user_login'  and booking.id=user.id");
                     if (mysqli_num_rows($sql)) {
                       $count = 1;
                       while ($details = mysqli_fetch_assoc($sql)) {

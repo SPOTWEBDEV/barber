@@ -109,7 +109,7 @@ include '../server/client/auth.php';
 
                     
 
-                    $sql = mysqli_query($connection, "SELECT booking.*, user.fullname, user.email,user.phone FROM booking,user WHERE user.id='$user_login' ");
+                    $sql = mysqli_query($connection, "SELECT booking.*, user.fullname, user.email,user.phone FROM booking,user WHERE user.id='$user_login' and booking.user=user.id");
                     if (mysqli_num_rows($sql)) {
                       $count = 1;
                       while ($details = mysqli_fetch_assoc($sql)) {

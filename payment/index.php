@@ -71,7 +71,7 @@
 
         if ($stmt) {
             echo "<script>
-            Swal.fire('Success!', 'Booking successfully submitted!', 'success').then(() => { window.location.href = 'index.php'; });
+            Swal.fire('Success!', 'Booking successfully submitted!', 'success').then(() => { window.location.href = '../user/book.php'; });
         </script>";
         } else {
             echo "<script>Swal.fire('Error!', 'Something went wrong!', 'error');</script>";

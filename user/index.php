@@ -108,7 +108,7 @@ include('../server/client/auth.php');
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <!-- Place this tag where you want the button to render. -->
               <li class="nav-item lh-1 me-3">
-                <a class="github-button" href="https://github.com/themeselection/sneat-html-admin-template-free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
+               
               </li>
             </ul>
           </div>
@@ -128,13 +128,12 @@ include('../server/client/auth.php');
                         <h5 class="card-title text-primary">Welcome to Your Dashboard</h5>
                         <p class="mb-4">You have <span class="fw-bold">
                             <?php
-                            $get_all = mysqli_query($connection, "SELECT * FROM `booking`");
+                            $get_all = mysqli_query($connection, "SELECT * FROM `booking` WHERE user='$user_login' AND `status`='pending'");
                             echo mysqli_num_rows($get_all)
                             ?>
-                          </span> Registered Users And You can manage your website from
-                          the action pane</p>
+                          </span> Pending Bookings </p>
 
-                        <a href="all.php" class="btn btn-sm btn-outline-primary">See Users</a>
+                        <a href="book.php" class="btn btn-sm btn-outline-primary">All Booking</a>
                       </div>
                     </div>
                     <div class="col-sm-5 text-center text-sm-left">
@@ -163,10 +162,10 @@ include('../server/client/auth.php');
                             </div>
                           </div>
                         </div>
-                        <span class="fw-semibold d-block mb-1">BookKeeping</span>
+                        <span class="fw-semibold d-block mb-1">Total Booking</span>
                         <h3 class="card-title mb-2">
                           <?php
-                          $get_all = mysqli_query($connection, "SELECT * FROM `booking`");
+                          $get_all = mysqli_query($connection, "SELECT * FROM `booking` WHERE user='$user_login'");
                           echo mysqli_num_rows($get_all)
                           ?>
                         </h3>
@@ -191,13 +190,13 @@ include('../server/client/auth.php');
                             </div>
                           </div> -->
                         </div>
-                        <span>Total Booking Amount</span>
+                        <span>Total Complete Booking Amount</span>
                         <h3 class="card-title text-nowrap mb-1">
 
                           <?php
-                          $get_all = mysqli_query($connection, "SELECT sum(amount) as total FROM booking");
+                          $get_all = mysqli_query($connection, "SELECT sum(amount) as total FROM booking WHERE `user`='$user_login' AND status='completed'");
                           $row =  mysqli_fetch_assoc($get_all);
-                          echo number_format($row['total']) ?? 0;
+                          echo  ($row['total'] == 0)? '0':  number_format($row['total'])
                           ?>
 
 

@@ -89,10 +89,11 @@ include '../server/connection.php';
                                         if (isset($_POST['register'])) {
                                             $fullname = mysqli_real_escape_string($connection, $_POST['fullname']);
                                             $email = mysqli_real_escape_string($connection, $_POST['email']);
+                                            $phone = mysqli_real_escape_string($connection, $_POST['phone']);
                                             $password = md5($_POST['password']);
 
-                                            if (!empty($fullname) && !empty($email) && !empty($_POST['password'])) {
-                                                $insert_user = mysqli_query($connection, "INSERT INTO `user`(`fullname`, `email`, `password`) VALUES ('$fullname','$email','$password')");
+                                            if (!empty($fullname) && !empty($email) && !empty($_POST['password']) && !empty($_POST['phone'])) {
+                                                $insert_user = mysqli_query($connection, "INSERT INTO `user`(`fullname`, `email`, `password`,`phone`) VALUES ('$fullname','$email','$password','$phone')");
 
                                                 if ($insert_user) {
                                                     echo "<script>Swal.fire('Success','Registration Successful','success').then(()=>{
@@ -114,6 +115,10 @@ include '../server/connection.php';
                                             <div class="mb-3">
                                                 <label class="form-label">Email</label>
                                                 <input type="email" class="form-control" name="email" placeholder="example@gmail.com" required />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Phone Number</label>
+                                                <input type="text" class="form-control" name="phone"  required />
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Password</label>
