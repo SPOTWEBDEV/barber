@@ -28,7 +28,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation Form</title>
+    <title><?php echo $sitename ?> - Expert Barbering, Haircuts & Beard Styling</title>
+    <meta name="description" content="Discover premium grooming at <?php echo $sitename ?>. Specializing in modern haircuts, precision beard trims, and classic shaves. Book your appointment today!">
+    <meta name="keywords" content="barber shop, men's grooming, modern haircuts, beard trimming, hot towel shave, Enugu Town barbers, men's haircuts Enugu State">
+    <meta property="og:title" content="<?php echo $sitename ?> - Professional Barbering Services">
+    <meta property="og:description" content="Premium haircuts, beard trims, and shaves. Book your grooming experience today!">
+    <meta property="og:url" content="https://gofinecutz.com.ng/about/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <style>

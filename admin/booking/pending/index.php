@@ -11,8 +11,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
-  <title><?php echo $sitename ?>-- Pending Booking History</title>
+  <title><?php echo $sitename ?> - Expert Barbering, Haircuts & Beard Styling</title>
+    <meta name="description" content="Discover premium grooming at <?php echo $sitename ?>. Specializing in modern haircuts, precision beard trims, and classic shaves. Book your appointment today!">
+    <meta name="keywords" content="barber shop, men's grooming, modern haircuts, beard trimming, hot towel shave, Enugu Town barbers, men's haircuts Enugu State">
+    <meta property="og:title" content="<?php echo $sitename ?> - Professional Barbering Services">
+    <meta property="og:description" content="Premium haircuts, beard trims, and shaves. Book your grooming experience today!">
+    <meta property="og:url" content="https://gofinecutz.com.ng/about/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="<?php echo $domain ?>admin/assets/img/favicon/favicon.ico" />
