@@ -289,9 +289,16 @@
 
       if (isset($_GET['app_id'])) {
           $app_id      = mysqli_real_escape_string($connection, $_GET['app_id']);
-          $updateQuery = "UPDATE `booking` SET `status`='approved', `updated_at`=NOW() WHERE `id`='$app_id'";
-          mysqli_query($connection, $updateQuery);
-          echo "<script>alert('Booking Approved!');;</script>";
+          $updateQuery = "UPDATE `booking` SET `status`='completed' WHERE `id`='$app_id'";
+          
+          if(mysqli_query($connection, $updateQuery)){
+            echo "<script>alert('Booking Approved!');
+            
+             window.location.href = 'index.php'
+            
+            </script>";
+          }
+         
       }
 
   ?>

@@ -1,17 +1,16 @@
 <?php
 
-include '../server/connection.php';
-if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
-  echo "<script> window.location.href = 'login.php'</script>";
-}
+    include '../server/connection.php';
+    if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
+        echo "<script> window.location.href = 'login.php'</script>";
+    }
 ?>
 <!DOCTYPE html>
-<html lang="en" class="light-style layout-menu-fixed " dir="ltr" data-theme="theme-default" data-assets-path="assets/" data-template="vertical-menu-template-free">
+<html lang="en" class="light-style layout-menu-fixed " dir="ltr" data-theme="theme-default" data-assets-path="<?php echo $domain ?>admin/assets/" data-template="vertical-menu-template-free">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
   <title><?php echo $sitename ?> - Expert Barbering, Haircuts & Beard Styling</title>
     <meta name="description" content="Discover premium grooming at <?php echo $sitename ?>. Specializing in modern haircuts, precision beard trims, and classic shaves. Book your appointment today!">
     <meta name="keywords" content="barber shop, men's grooming, modern haircuts, beard trimming, hot towel shave, Enugu Town barbers, men's haircuts Enugu State">
@@ -20,7 +19,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
     <meta property="og:url" content="https://gofinecutz.com.ng/about/">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="<?php echo $domain ?>admin/assets/img/favicon/favicon.ico" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,32 +27,32 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Icons. Uncomment required icon fonts -->
-  <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
+  <link rel="stylesheet" href="<?php echo $domain ?>admin/assets/vendor/fonts/boxicons.css" />
 
 
 
   <!-- Core CSS -->
-  <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
-  <link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-  <link rel="stylesheet" href="assets/css/demo.css" />
+  <link rel="stylesheet" href="<?php echo $domain ?>admin/assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="<?php echo $domain ?>admin/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="<?php echo $domain ?>admin/assets/css/demo.css" />
 
   <!-- Vendors CSS -->
-  <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="<?php echo $domain ?>admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
 
 
   <!-- Page CSS -->
 
   <!-- Helpers -->
-  <script src="assets/vendor/js/helpers.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/vendor/js/helpers.js"></script>
 
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-  <script src="assets/js/config.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/js/config.js"></script>
 
   <!-- beautify ignore:end -->
-   <script src="<?php  echo $domain ?>admin/assets/js/jquery-3.6.0.min.js"></script>
-  <script src="<?php  echo $domain ?>admin/assets/js/sweetalert2.all.min.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/js/sweetalert2.all.min.js"></script>
 
 </head>
 
@@ -64,13 +63,115 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
     <div class="layout-container">
 
       <!-- Menu -->
-      <?php include 'includes/side_bar.php' ?>
+      <?php include './includes/side_bar.php'?>
       <!-- / Menu -->
 
       <!-- Layout container -->
       <div class="layout-page">
 
-       
+        <!-- Navbar -->
+
+        <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+
+          <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+              <i class="bx bx-menu bx-sm"></i>
+            </a>
+          </div>
+
+
+          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
+            <!-- Search -->
+            <div class="navbar-nav align-items-center">
+              <div class="nav-item d-flex align-items-center">
+                <i class="bx bx-search fs-4 lh-0"></i>
+                <input type="text" class="form-control border-0 shadow-none" placeholder="Search..." aria-label="Search...">
+              </div>
+            </div>
+            <!-- /Search -->
+
+
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+
+
+              <!-- Place this tag where you want the button to render. -->
+              <li class="nav-item lh-1 me-3">
+                <a class="github-button" href="https://github.com/themeselection/sneat-html-admin-template-free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
+              </li>
+
+
+
+              <!-- User -->
+              <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                  <div class="avatar avatar-online">
+                    <img src="<?php echo $domain ?>admin/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar avatar-online">
+                            <img src="<?php echo $domain ?>admin/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <span class="fw-semibold d-block">John Doe</span>
+                          <small class="text-muted">Admin</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="bx bx-user me-2"></i>
+                      <span class="align-middle">My Profile</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="bx bx-cog me-2"></i>
+                      <span class="align-middle">Settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="d-flex align-items-center align-middle">
+                        <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
+                        <span class="flex-grow-1 align-middle">Billing</span>
+                        <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="auth-login-basic.html">
+                      <i class="bx bx-power-off me-2"></i>
+                      <span class="align-middle">Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--/ User -->
+
+
+            </ul>
+          </div>
+
+
+
+        </nav>
+
+        <!-- / Navbar -->
 
 
         <!-- Content wrapper -->
@@ -81,12 +182,12 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
           <div class="container-xxl flex-grow-1 container-p-y">
 
             <h4 class="fw-bold py-3 mb-4">
-              <span class="text-muted fw-light">Admin /</span> Booking
+              <span class="text-muted fw-light">Admin /</span> Pending Booking
             </h4>
 
             <!-- Basic Bootstrap Table -->
             <div class="card">
-              <h5 class="card-header">All Booking</h5>
+              <h5 class="card-header">All Pending Booking</h5>
               <div class="table-responsive text-nowrap">
                 <table class="table">
                   <thead>
@@ -94,8 +195,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                       <th>S/N</th>
                       <th>Fullname</th>
                       <th>Email</th>
-                      <th>Phone Number</th>
-                      <th>Address</th>
+                      <th>Phonenumber</th>
                       <th>Booked_Date</th>
                       <th>Amount</th>
 
@@ -108,58 +208,57 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                   <tbody class="table-border-bottom-0">
                     <?php
 
-                    $sql = mysqli_query($connection, "SELECT booking.*,user.fullname,user.email,user.phone FROM booking,user  where booking.user=user.id");
-                    if (mysqli_num_rows($sql)) {
-                      $count = 1;
-                      while ($details = mysqli_fetch_assoc($sql)) {
+                        $sql = mysqli_query($connection, "SELECT booking.*,user.fullname,user.email,user.phone FROM booking,user WHERE booking.user=user.id");
 
-                        $id = $details['id'];
-                    ?>
+                        if (mysqli_num_rows($sql)) {
+                            $count = 1;
+                            while ($details = mysqli_fetch_assoc($sql)) {
+
+                                $id = $details['id'];
+                            ?>
                         <tr>
                           <td><?php echo $count ?></td>
                           <td><?php echo $details['fullname'] ?></td>
 
                           <td><?php echo $details['email'] ?></td>
                           <td><?php echo $details['phone'] ?></td>
-                          <td><?php echo $details['address'] ?></td>
-                          <td><?php echo $details['appointment_date'] ?></td>
-                          <td><?php echo ($details['amount'] == '') ? '0.00' : number_format($details['amount'], 2) ?></td>
+                          <td><?php echo $details['created_at'] ?></td>
+                          <td><?php echo($details['amount'] == '') ? '0.00' : number_format($details['amount'], 2) ?></td>
                           <td><?php
 
-                              if ($details['status'] == 'pending' || $details['status'] == 'ongoing') {
-                                echo "<span class='badge bg-danger'>Pending</span>";
-                              }
-                              if ($details['status'] == 'cancelled' || $details['status'] == 'declined' || $details['status'] == 'failed' || $details['status'] == 'abandoned') {
-                                echo "<span class='badge bg-warning'>Declined</span>";
-                              }
-                              if ($details['status'] == 'success' || $details['status'] == 'approved' || $details['status'] == 'completed') {
-                                echo "<span class='badge bg-success'>Completed</span>";
-                              }
-                              ?>
+                                         
+                                          if ($details['status'] == 'cancelled' || $details['status'] == 'declined' || $details['status'] == 'failed' || $details['status'] == 'abandoned') {
+                                              echo "<span class='badge bg-warning'>Declined</span>";
+                                          }else if($details['status'] == 'success' || $details['status'] == 'approved' || $details['status'] == 'completed') {
+                                              echo "<span class='badge bg-success'>Success</span>";
+                                          }else{
+                                            echo "<span class='badge bg-danger'>Pending</span>";
+                                          }
+                                      ?>
                           </td>
 
                           <td>
                             <?php
 
-                            if ($details['status'] == 'pending' || $details['status'] == 'ongoing') {
-                              echo "<a  href='?app_id=$id'><span  class='badge bg-primary'>click to approved</span></a>";
-                              echo '<br>';
-                              echo "<a  href='?del_id=$id'><span class='badge bg-primary ml-2'>click to declined</span></a>";
-                            } else {
-                              echo '--';
-                            }
+                                        if ($details['status'] == 'pending' || $details['status'] == 'ongoing') {
+                                            echo "<a  href='?app_id=$id'><span  class='badge bg-primary'>click to approved</span></a>";
+                                            echo '<br>';
+                                            echo "<a  href='?del_id=$id'><span class='badge bg-primary ml-2'>click to declined</span></a>";
+                                        } else {
+                                            echo '--';
+                                        }
 
-                            ?>
+                                    ?>
 
                           </td>
 
 
                         </tr>
                     <?php $count++;
-                      }
-                    } else {
-                      echo "<td class='bg-danger text-white' colspan='10'>No Users</td>";
-                    } ?>
+                            }
+                        } else {
+                            echo "<td class='bg-danger text-white' colspan='10'>No Pending Booking</td>";
+                    }?>
                   </tbody>
                 </table>
               </div>
@@ -187,38 +286,67 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
 
   <?php
 
-  if (isset($_GET['app_id'])) {
-    $app_id      = mysqli_real_escape_string($connection, $_GET['app_id']);
-    $updateQuery = "UPDATE `donations` SET `status`='approved', `updated_at`=NOW() WHERE `id`='$app_id'";
-    mysqli_query($connection, $updateQuery);
-    echo "<script>alert('Donation Approved!');;</script>";
-  }
+      if (isset($_GET['app_id'])) {
+          $app_id      = mysqli_real_escape_string($connection, $_GET['app_id']);
+          $updateQuery = "UPDATE `booking` SET `status`='completed' WHERE `id`='$app_id'";
+          
+         
+          if(mysqli_query($connection, $updateQuery)){
+            echo "<script>alert('Booking Approved!');
+            
+             window.location.href = 'book.php'
+            
+            </script>";
+          }
+      }
 
-  if (isset($_GET['del_id'])) {
-    $del_id      = mysqli_real_escape_string($connection, $_GET['del_id']);
-    $updateQuery = "UPDATE `donations` SET `status`='declined', `updated_at`=NOW() WHERE `id`='$del_id'";
-    mysqli_query($connection, $updateQuery);
-    echo "<script>alert('Donation Declined!');</script>";
-  }
+  ?>
 
+  <?php
+      if (isset($_GET['del_id'])) {
+          $del_id = mysqli_real_escape_string($connection, $_GET['del_id']);
+
+          echo "<script>
+        let reason = prompt('Why do you want to decline this booking?');
+        if (reason) {
+            window.location.href = 'index.php?del_id=$del_id&reason=' + encodeURIComponent(reason);
+        }
+    </script>";
+      }
+
+      if (isset($_GET['del_id']) && isset($_GET['reason'])) {
+          $del_id = mysqli_real_escape_string($connection, $_GET['del_id']);
+          $reason = mysqli_real_escape_string($connection, $_GET['reason']);
+
+          $updateQuery =  mysqli_query($connection,"UPDATE `booking` SET `status`='declined', `status_message`='$reason' WHERE `id`='$del_id'");
+
+          if($updateQuery){
+           echo "<script>
+           alert('Booking Declined!');
+            setTimeout(()=>{
+            window.location.href = 'index.php'
+                
+          },2000)
+           </script>";
+          }
+
+          
+      }
   ?>
 
 
 
 
-  <!-- <div class="buy-now">
-    <a href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/" target="_blank" class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
-  </div> -->
 
 
   <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="assets/vendor/libs/popper/popper.js"></script>
-  <script src="assets/vendor/js/bootstrap.js"></script>
-  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <!-- build:js                <?php echo $domain ?>admin/assets/vendor/js/core.js -->
+  <script src="<?php echo $domain ?>admin/assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/vendor/libs/popper/popper.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/vendor/js/bootstrap.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-  <script src="assets/vendor/js/menu.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/vendor/js/menu.js"></script>
   <!-- endbuild -->
 
   <!-- Vendors JS -->
@@ -226,7 +354,7 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
 
 
   <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?php echo $domain ?>admin/assets/js/main.js"></script>
 
   <!-- Page JS -->
 

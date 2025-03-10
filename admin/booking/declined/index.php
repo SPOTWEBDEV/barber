@@ -234,6 +234,10 @@ if (! isset($_SESSION['admin_login_']) && $_SESSION['admin_login_'] != true) {
                                                         ?>
                                                     </td>
 
+                                                    <td>
+                                                    <?php echo $details['status_message'] ?>
+                                                    </td>
+
                                                 </tr>
                                         <?php $count++;
                                             }
