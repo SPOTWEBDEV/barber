@@ -99,7 +99,7 @@ include '../server/client/auth.php';
                       <th>Amount</th>
 
                       <th>Status</th>
-                      <th>Action</th>
+                     
 
 
                     </tr>
@@ -139,7 +139,7 @@ include '../server/client/auth.php';
                               ?>
                           </td>
 
-                          <td>
+                          <!-- <td>
                             <?php
 
                             if ($details['status'] == 'pending' || $details['status'] == 'ongoing') {
@@ -152,7 +152,8 @@ include '../server/client/auth.php';
 
                             ?>
 
-                          </td>
+                          </td> -->
+                         
 
 
                         </tr>
