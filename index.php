@@ -14,12 +14,21 @@ include './server/connection.php';
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><?php echo $sitename ?></title>
-    <meta name="description" content="Gerow - Business Consulting HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $domain ?>assets/img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
+
+    <title><?php echo $sitename ?> - Expert Barbering, Haircuts & Beard Styling</title>
+    <meta name="description" content="Discover premium grooming at <?php echo $sitename ?>. Specializing in modern haircuts, precision beard trims, and classic shaves. Book your appointment today!">
+    <meta name="keywords" content="barber shop, men's grooming, modern haircuts, beard trimming, hot towel shave, Enugu Town barbers, men's haircuts Enugu State">
+    <meta property="og:title" content="<?php echo $sitename ?> - Professional Barbering Services">
+    <meta property="og:description" content="Premium haircuts, beard trims, and shaves. Book your grooming experience today!">
+    <meta property="og:url" content="https://gofinecutz.com.ng/about/">
+
+
+
+
 
     <!-- CSS here -->
     <link rel="stylesheet" href="<?php echo $domain ?>assets/css/bootstrap.min.css">
@@ -51,153 +60,153 @@ include './server/connection.php';
     <!-- preloader-end -->
 
     <!-- Scroll-top -->
-        <button class="scroll-top scroll-to-target" data-target="html">
-            <i class="fas fa-angle-up"></i>
-        </button>
-        <!-- Scroll-top-end-->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
 
-        <!-- header-area -->
-        <header  id="sticky-header" class="transparent-header header-style-three">
-            <div class="menu-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
-                            <div class="menu-wrap">
-                                <nav class="menu-nav">
-                                    <div class="logo">
-                                        <a href="index-2.html"><img style="height: 130px; width: 150px; padding: 10px 0px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
-                                    </div>
-                                    <div class="navbar-wrap main-menu d-none d-lg-flex">
-                                        <ul class="navigation">
-                                        
-                                          
-                                                   
+    <!-- header-area -->
+    <header id="sticky-header" class="transparent-header header-style-three">
+        <div class="menu-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+                        <div class="menu-wrap">
+                            <nav class="menu-nav">
+                                <div class="logo">
+                                    <a href="index-2.html"><img style="height: 130px; width: 150px; padding: 10px 0px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
+                                </div>
+                                <div class="navbar-wrap main-menu d-none d-lg-flex">
+                                    <ul class="navigation">
+
+
+
                                         <li><a href="<?php echo $domain ?>">Home</a></li>
                                         <li><a href="<?php echo $domain ?>about/">About</a></li>
                                         <li><a href="<?php echo $domain ?>portfolio/">Portfolio</a></li>
                                         <li><a href="<?php echo $domain ?>pricing/">Pricing</a></li>
 
-                                        </ul>
-                                    </div>
-                                    <div class="header-action">
-                                        <ul class="list-wrap">
-                                            <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
-                                            <li class="offcanvas-menu offcanvas-menu-two">
-                                                <a href="#" class="menu-tigger">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </a>
-                                            </li>
-                                            <li class="header-contact-two">
-                                                <div class="icon">
-                                                    <i class="flaticon-phone-call"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <span>Hot Line Number</span>
-                                                    <a href="tel:<?php echo $sitephone ?>"><?php echo $sitephone ?></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-
-                            <!-- Mobile Menu  -->
-                            <div class="mobile-menu">
-                                <nav class="menu-box">
-                                    <div class="close-btn"><i class="fas fa-times"></i></div>
-                                    <div class="nav-logo">
-                                        <a href="index-2.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
-                                    </div>
-                                    <div class="mobile-search">
-                                        <form action="#">
-                                            <input type="text" placeholder="Search here...">
-                                            <button><i class="flaticon-search"></i></button>
-                                        </form>
-                                    </div>
-                                    <div class="menu-outer">
-                                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
-                                    </div>
-                                   
-                                </nav>
-                            </div>
-                            <div class="menu-backdrop"></div>
-                            <!-- End Mobile Menu -->
-
+                                    </ul>
+                                </div>
+                                <div class="header-action">
+                                    <ul class="list-wrap">
+                                        <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
+                                        <li class="offcanvas-menu offcanvas-menu-two">
+                                            <a href="#" class="menu-tigger">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                        </li>
+                                        <li class="header-contact-two">
+                                            <div class="icon">
+                                                <i class="flaticon-phone-call"></i>
+                                            </div>
+                                            <div class="content">
+                                                <span>Hot Line Number</span>
+                                                <a href="tel:<?php echo $sitephone ?>"><?php echo $sitephone ?></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- header-search -->
-            <div class="search-popup-wrap" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="search-close">
-                    <span><i class="fas fa-times"></i></span>
-                </div>
-                <div class="search-wrap text-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <h2 class="title">... Search Here ...</h2>
-                                <div class="search-form">
+                        <!-- Mobile Menu  -->
+                        <div class="mobile-menu">
+                            <nav class="menu-box">
+                                <div class="close-btn"><i class="fas fa-times"></i></div>
+                                <div class="nav-logo">
+                                    <a href="index-2.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                </div>
+                                <div class="mobile-search">
                                     <form action="#">
-                                        <input type="text" name="search" placeholder="Type keywords here">
-                                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                                        <input type="text" placeholder="Search here...">
+                                        <button><i class="flaticon-search"></i></button>
                                     </form>
                                 </div>
+                                <div class="menu-outer">
+                                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                                </div>
+
+                            </nav>
+                        </div>
+                        <div class="menu-backdrop"></div>
+                        <!-- End Mobile Menu -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- header-search -->
+        <div class="search-popup-wrap" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="search-close">
+                <span><i class="fas fa-times"></i></span>
+            </div>
+            <div class="search-wrap text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="title">... Search Here ...</h2>
+                            <div class="search-form">
+                                <form action="#">
+                                    <input type="text" name="search" placeholder="Type keywords here">
+                                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- header-search-end -->
+        </div>
+        <!-- header-search-end -->
 
-            <!-- offCanvas-menu -->
-            <div class="extra-info">
-                <div class="close-icon menu-close">
-                    <button><i class="far fa-window-close"></i></button>
+        <!-- offCanvas-menu -->
+        <div class="extra-info">
+            <div class="close-icon menu-close">
+                <button><i class="far fa-window-close"></i></button>
+            </div>
+            <div class="logo-side mb-30">
+                <a href="index-2.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <div class="side-info mb-30">
+                <div class="contact-list mb-30">
+                    <h4>Office Address</h4>
+                    <p><?php echo $siteaddress ?></p>
                 </div>
-                <div class="logo-side mb-30">
-                    <a href="index-2.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                <div class="contact-list mb-30">
+                    <h4>Phone Number</h4>
+                    <p><?php echo $sitephone ?></p>
+                   
                 </div>
-                <div class="side-info mb-30">
-                    <div class="contact-list mb-30">
-                        <h4>Office Address</h4>
-                        <p>123/A, Miranda City Likaoli <br> Prikano, Dope</p>
-                    </div>
-                    <div class="contact-list mb-30">
-                        <h4>Phone Number</h4>
-                        <p>+0989 7876 9865 9</p>
-                        <p>+(090) 8765 86543 85</p>
-                    </div>
-                    <div class="contact-list mb-30">
-                        <h4>Email Address</h4>
-                        <p>info@example.com</p>
-                        <p>example.mail@hum.com</p>
-                    </div>
-                </div>
-                <ul class="side-instagram list-wrap">
-                    <li><a href="#"><img src="assets/img/images/sb_insta01.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/images/sb_insta02.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/images/sb_insta03.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/images/sb_insta04.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/images/sb_insta05.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/images/sb_insta06.jpg" alt=""></a></li>
-                </ul>
-                <div class="social-icon-right mt-30">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="contact-list mb-30">
+                    <h4>Email Address</h4>
+                    <p><?php echo $siteemail ?></p>
+                    
                 </div>
             </div>
-            <div class="offcanvas-overly"></div>
-            <!-- offCanvas-menu-end -->
+            <ul class="side-instagram list-wrap">
+                <li><a href="#"><img src="assets/img/images/sb_insta01.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/images/sb_insta02.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/images/sb_insta03.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/images/sb_insta04.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/images/sb_insta05.jpg" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/images/sb_insta06.jpg" alt=""></a></li>
+            </ul>
+            <div class="social-icon-right mt-30">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="offcanvas-overly"></div>
+        <!-- offCanvas-menu-end -->
 
-        </header>
-        <!-- header-area-end -->
+    </header>
+    <!-- header-area-end -->
 
 
 
@@ -319,7 +328,7 @@ include './server/connection.php';
                             <h2 class="title tg-element-title">A Complete Solution For Global Business</h2>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
             <div class="container custom-container-three">
@@ -327,13 +336,13 @@ include './server/connection.php';
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div class="project-thumb-three">
-                                <a  href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/3.jpg" alt=""></a>
+                                <a href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/3.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
-                            <div style=""class="project-thumb-three">
+                            <div style="" class="project-thumb-three">
                                 <a href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/14.jpg" alt=""></a>
                             </div>
                         </div>
@@ -341,14 +350,14 @@ include './server/connection.php';
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div class="project-thumb-three">
-                                <a  href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/7.jpeg" alt=""></a>
+                                <a href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/7.jpeg" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="project-item-three">
                             <div class="project-thumb-three">
-                                <a  href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/5.jpeg" alt=""></a>
+                                <a href=""><img style="height: 500px !important;" src="<?php echo $domain ?>assets/img/work/5.jpeg" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -477,7 +486,7 @@ include './server/connection.php';
                                     </div>
                                     <div class="content">
                                         <span>Call For More Info</span>
-                                        <a href="tel:0123456789"><?php echo $sitephone?></a>
+                                        <a href="tel:0123456789"><?php echo $sitephone ?></a>
                                     </div>
                                 </div>
                                 <h2 class="title">Let’s Request a Schedule For Free Consultation</h2>

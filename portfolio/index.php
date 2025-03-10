@@ -10,12 +10,16 @@ include('../server/connection.php');
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><?php echo $sitename ?></title>
-    <meta name="description" content="Gerow - Business Consulting HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $domain ?>assets/img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
+    <title><?php echo $sitename ?> - Expert Barbering, Haircuts & Beard Styling</title>
+    <meta name="description" content="Discover premium grooming at <?php echo $sitename ?>. Specializing in modern haircuts, precision beard trims, and classic shaves. Book your appointment today!">
+    <meta name="keywords" content="barber shop, men's grooming, modern haircuts, beard trimming, hot towel shave, Enugu Town barbers, men's haircuts Enugu State">
+    <meta property="og:title" content="<?php echo $sitename ?> - Professional Barbering Services">
+    <meta property="og:description" content="Premium haircuts, beard trims, and shaves. Book your grooming experience today!">
+    <meta property="og:url" content="https://gofinecutz.com.ng/about/">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="<?php echo $domain ?>assets/css/bootstrap.min.css">
@@ -67,7 +71,7 @@ include('../server/connection.php');
                             <h2 class="title">Portfolio</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="<?php echo $domain ?>index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
                                 </ol>
                             </nav>
