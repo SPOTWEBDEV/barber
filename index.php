@@ -71,11 +71,11 @@ include './server/connection.php';
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+                       
                         <div class="menu-wrap">
                             <nav class="menu-nav">
                                 <div class="logo">
-                                    <a href=""><img style="height: 130px; width: 150px; padding: 0px 0px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
+                                    <a href=""><img style="height: 130px; width: 150px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
                                 </div>
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
@@ -87,23 +87,19 @@ include './server/connection.php';
                                         <li><a href="<?php echo $domain ?>portfolio/">Portfolio</a></li>
                                         <li><a href="<?php echo $domain ?>pricing/">Pricing</a></li>
 
+                                        <li><a href="<?php echo $domain ?>user/login.php">Login</a></li>
+                                        <li><a href="<?php echo $domain ?>user/register.php">Register</a></li>
+                                        
                                     </ul>
                                 </div>
-                                <div class="header-action d-none d-md-block">
-                                <ul class="list-wrap">
-                                    <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
-                                    <li class="header-btn"><a href="<?php echo $domain ?>user/login.php" class="btn btn-two">Login</a></li>
-                                </ul>
-                            </div>
-                            <div class="header-action d-none d-md-block">
-                                <ul class="list-wrap">
-                                    <!-- <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li> -->
-                                    <li class="header-btn"><a href="<?php echo $domain ?>user/register.php" class="btn btn-two">Register</a></li>
-                                </ul>
-                            </div>
+                                
+                               
+                               
+                            
+                            
                                 <div class="header-action">
                                     <ul class="list-wrap">
-                                        <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
+                                       
                                         <li class="offcanvas-menu offcanvas-menu-two">
                                             <a href="#" class="menu-tigger">
                                                 <span></span>
@@ -122,6 +118,7 @@ include './server/connection.php';
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
                             </nav>
                         </div>
 
@@ -130,7 +127,7 @@ include './server/connection.php';
                             <nav class="menu-box">
                                 <div class="close-btn"><i class="fas fa-times"></i></div>
                                 <div class="nav-logo">
-                                    <a href="index-2.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                    <a href="#"><img src="assets/img/logo/logo.jpg" alt="Logo"></a>
                                 </div>
                                 <div class="mobile-search">
                                     <form action="#">
