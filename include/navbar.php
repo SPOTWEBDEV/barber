@@ -67,7 +67,7 @@
                         <nav class="menu-box">
                             <div class="close-btn"><i class="fas fa-times"></i></div>
                             <div class="nav-logo">
-                                <a href=""><img src="<?php echo $domain ?>assets/img/logo/logo.jpg" alt="Logo"></a>
+                                <a href=""><img src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
                             </div>
                             <div class="mobile-search">
                                 <form action="#">
