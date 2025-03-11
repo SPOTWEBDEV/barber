@@ -75,7 +75,7 @@ include './server/connection.php';
                         <div class="menu-wrap">
                             <nav class="menu-nav">
                                 <div class="logo">
-                                    <a href="index-2.html"><img style="height: 130px; width: 150px; padding: 10px 0px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
+                                    <a href=""><img style="height: 130px; width: 150px; padding: 0px 0px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
                                 </div>
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
@@ -89,6 +89,18 @@ include './server/connection.php';
 
                                     </ul>
                                 </div>
+                                <div class="header-action d-none d-md-block">
+                                <ul class="list-wrap">
+                                    <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>
+                                    <li class="header-btn"><a href="<?php echo $domain ?>user/login.php" class="btn btn-two">Login</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-action d-none d-md-block">
+                                <ul class="list-wrap">
+                                    <!-- <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li> -->
+                                    <li class="header-btn"><a href="<?php echo $domain ?>user/register.php" class="btn btn-two">Register</a></li>
+                                </ul>
+                            </div>
                                 <div class="header-action">
                                     <ul class="list-wrap">
                                         <li class="header-search"><a href="#"><i class="flaticon-search"></i></a></li>

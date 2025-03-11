@@ -38,7 +38,7 @@
                     <div class="menu-wrap">
                         <nav class="menu-nav">
                             <div class="logo">
-                                <a href="index.html"><img style="height: 130px; width: 150px; padding: 10px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
+                                <a href=""><img style="height: 130px; width: 150px; padding: 10px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
                             </div>
                             <div class="navbar-wrap main-menu d-none d-lg-flex">
                                 <ul class="navigation">
@@ -48,6 +48,7 @@
                                     <li class=""><a href="<?php echo $domain ?>about">About Us</a></li>
                                     <li><a href="<?php echo $domain ?>portfolio">Portfolio</a></li>
                                     <li><a href="<?php echo $domain ?>pricing">Pricing</a></li>
+                                    <li><a href="<?php echo $domain ?>user/login.php">Login</a></li>
 
                                     <!-- <li><a href="<?php echo $domain ?>contact">contact Us</a></li> -->
                                 </ul>
@@ -66,7 +67,7 @@
                         <nav class="menu-box">
                             <div class="close-btn"><i class="fas fa-times"></i></div>
                             <div class="nav-logo">
-                                <a href="index.html"><img src="<?php echo $domain ?>assets/img/logo/logo.png" alt="Logo"></a>
+                                <a href=""><img src="<?php echo $domain ?>assets/img/logo/logo.jpg" alt="Logo"></a>
                             </div>
                             <div class="mobile-search">
                                 <form action="#">
