@@ -40,6 +40,7 @@
                             <!-- <div class="logo">
                                 <a href=""><img style="height: 130px; width: 150px; padding: 10px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
                             </div> -->
+                            <h2 style="font-size: 60px;margin: 0 0 70px 0; font-weight: 1000;padding-top:35px"><?php echo $sitename ?></h2>
                             <div class="navbar-wrap main-menu d-none d-lg-flex">
                                 <ul class="navigation">
                                     <li><a href="<?php echo $domain ?>">Home</a>
