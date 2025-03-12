@@ -187,23 +187,7 @@ include '../server/client/auth.php';
   </div>
 
 
-  <?php
-
-  if (isset($_GET['app_id'])) {
-    $app_id      = mysqli_real_escape_string($connection, $_GET['app_id']);
-    $updateQuery = "UPDATE `donations` SET `status`='approved', `updated_at`=NOW() WHERE `id`='$app_id'";
-    mysqli_query($connection, $updateQuery);
-    echo "<script>alert('Donation Approved!');;</script>";
-  }
-
-  if (isset($_GET['del_id'])) {
-    $del_id      = mysqli_real_escape_string($connection, $_GET['del_id']);
-    $updateQuery = "UPDATE `donations` SET `status`='declined', `updated_at`=NOW() WHERE `id`='$del_id'";
-    mysqli_query($connection, $updateQuery);
-    echo "<script>alert('Donation Declined!');</script>";
-  }
-
-  ?>
+  
 
 
 
