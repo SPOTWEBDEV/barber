@@ -75,7 +75,7 @@ include './server/connection.php';
                         <div class="menu-wrap">
                             <nav class="menu-nav">
                                 <div class="logo">
-                                    <a href=""><img style="height: 130px; width: 150px;padding-bottom:20px" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
+                                    <a href=""><img style="height: auto; width: 100px;padding-bottom:20px;display:flex;align-items:center;justify-content:space-between;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
                                 </div>
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
@@ -227,7 +227,7 @@ include './server/connection.php';
         <section class="banner-area-three">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-9 order-0 order-lg-2">
+                    <div style="padding-top:25px" class="col-lg-7 col-md-9 order-0 order-lg-2">
                         <div class="banner-img-three" data-aos="fade-left" data-aos-delay="300">
                             <img height="500" src="<?php echo $domain ?>assets/img/work/1.jpg" alt="" class="main-img">
 
