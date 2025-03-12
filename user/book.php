@@ -11,8 +11,12 @@ include '../server/client/auth.php';
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
-  <title><?php echo $sitename ?> -- Booking History</title>
+  <title><?php echo $sitename ?> - Expert Barbering, Haircuts & Beard Styling</title>
+    <meta name="description" content="Discover premium grooming at <?php echo $sitename ?>. Specializing in modern haircuts, precision beard trims, and classic shaves. Book your appointment today!">
+    <meta name="keywords" content="barber shop, men's grooming, modern haircuts, beard trimming, hot towel shave, Enugu Town barbers, men's haircuts Enugu State">
+    <meta property="og:title" content="<?php echo $sitename ?> - Professional Barbering Services">
+    <meta property="og:description" content="Premium haircuts, beard trims, and shaves. Book your grooming experience today!">
+    <meta property="og:url" content="https://gofinecutz.com.ng/about/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
@@ -47,8 +51,8 @@ include '../server/client/auth.php';
   <script src="assets/js/config.js"></script>
 
   <!-- beautify ignore:end -->
-  <script src="jquery-3.6.0.min.js"></script>
-  <script src="sweetalert2.all.min.js"></script>
+  <script src="<?php  echo $domain ?>admin/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="<?php  echo $domain ?>admin/assets/js/sweetalert2.all.min.js"></script>
 
 </head>
 
@@ -95,7 +99,7 @@ include '../server/client/auth.php';
                       <th>Amount</th>
 
                       <th>Status</th>
-                      <th>Action</th>
+                     
 
 
                     </tr>
@@ -105,7 +109,7 @@ include '../server/client/auth.php';
 
                     
 
-                    $sql = mysqli_query($connection, "SELECT booking.*, user.fullname, user.email,user.phone FROM booking,user WHERE user.id='$user_login' ");
+                    $sql = mysqli_query($connection, "SELECT booking.*, user.fullname, user.email,user.phone FROM booking,user WHERE user.id='$user_login' and booking.user=user.id");
                     if (mysqli_num_rows($sql)) {
                       $count = 1;
                       while ($details = mysqli_fetch_assoc($sql)) {
@@ -135,7 +139,21 @@ include '../server/client/auth.php';
                               ?>
                           </td>
 
-                          
+                          <!-- <td>
+                            <?php
+
+                            if ($details['status'] == 'pending' || $details['status'] == 'ongoing') {
+                              echo "<a  href='?app_id=$id'><span  class='badge bg-primary'>click to approved</span></a>";
+                              echo '<br>';
+                              echo "<a  href='?del_id=$id'><span class='badge bg-primary ml-2'>click to declined</span></a>";
+                            } else {
+                              echo '--';
+                            }
+
+                            ?>
+
+                          </td> -->
+                         
 
 
                         </tr>

@@ -6,7 +6,7 @@
     <ul class="menu-inner py-1 mt-5">
         <!-- Dashboard -->
         <li class="menu-item active">
-            <a href="<?php echo $domain ?>" class="menu-link">
+            <a href="<?php echo $domain ?>user/" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>

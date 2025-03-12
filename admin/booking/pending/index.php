@@ -11,8 +11,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
-  <title><?php echo $sitename ?>-- Pending Booking History</title>
+  <title><?php echo $sitename ?> - Expert Barbering, Haircuts & Beard Styling</title>
+    <meta name="description" content="Discover premium grooming at <?php echo $sitename ?>. Specializing in modern haircuts, precision beard trims, and classic shaves. Book your appointment today!">
+    <meta name="keywords" content="barber shop, men's grooming, modern haircuts, beard trimming, hot towel shave, Enugu Town barbers, men's haircuts Enugu State">
+    <meta property="og:title" content="<?php echo $sitename ?> - Professional Barbering Services">
+    <meta property="og:description" content="Premium haircuts, beard trims, and shaves. Book your grooming experience today!">
+    <meta property="og:url" content="https://gofinecutz.com.ng/about/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="<?php echo $domain ?>admin/assets/img/favicon/favicon.ico" />
@@ -94,7 +98,7 @@
 
               <!-- Place this tag where you want the button to render. -->
               <li class="nav-item lh-1 me-3">
-                <a class="github-button" href="https://github.com/themeselection/sneat-html-admin-template-free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
+               
               </li>
 
 
@@ -285,15 +289,22 @@
 
       if (isset($_GET['app_id'])) {
           $app_id      = mysqli_real_escape_string($connection, $_GET['app_id']);
-          $updateQuery = "UPDATE `booking` SET `status`='approved', `updated_at`=NOW() WHERE `id`='$app_id'";
-          mysqli_query($connection, $updateQuery);
-          echo "<script>alert('Booking Approved!');;</script>";
+          $updateQuery = "UPDATE `booking` SET `status`='completed' WHERE `id`='$app_id'";
+          
+          if(mysqli_query($connection, $updateQuery)){
+            echo "<script>alert('Booking Approved!');
+            
+             window.location.href = 'index.php'
+            
+            </script>";
+          }
+         
       }
 
   ?>
 
   <?php
-      if (isset($_GET['del_id'])) {
+      if (isset($_GET['del_id']) && !isset($_GET['reason'])) {
           $del_id = mysqli_real_escape_string($connection, $_GET['del_id']);
 
           echo "<script>

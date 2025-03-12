@@ -1,5 +1,5 @@
 <?php
-    include '../server/connection.php';
+include '../server/connection.php';
 ?>
 
 
@@ -11,7 +11,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>User Authentication</title>
+  <title><?php echo $sitename ?> - Expert Barbering, Haircuts & Beard Styling</title>
+    <meta name="description" content="Discover premium grooming at <?php echo $sitename ?>. Specializing in modern haircuts, precision beard trims, and classic shaves. Book your appointment today!">
+    <meta name="keywords" content="barber shop, men's grooming, modern haircuts, beard trimming, hot towel shave, Enugu Town barbers, men's haircuts Enugu State">
+    <meta property="og:title" content="<?php echo $sitename ?> - Professional Barbering Services">
+    <meta property="og:description" content="Premium haircuts, beard trims, and shaves. Book your grooming experience today!">
+    <meta property="og:url" content="https://gofinecutz.com.ng/about/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
@@ -57,8 +62,8 @@
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
 
-  <script src="jquery-3.6.0.min.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
+<script src="<?php  echo $domain ?>admin/assets/js/jquery-3.6.0.min.js"></script>
+<script src="<?php  echo $domain ?>admin/assets/js/sweetalert2.all.min.js"></script>
   <!-- Custom notification for demo -->
   <!-- beautify ignore:end -->
 
@@ -99,36 +104,36 @@
                   </div>
                   <div class="card-body">
                     <?php
-                        if (isset($_POST['proceed'])) {
-                            $email = mysqli_real_escape_string($connection, $_POST['email']);
-                            $pass  = mysqli_real_escape_string($connection, $_POST['pass']);
+                    if (isset($_POST['proceed'])) {
+                      $email = mysqli_real_escape_string($connection, $_POST['email']);
+                      $pass  = mysqli_real_escape_string($connection, $_POST['pass']);
 
-                            
 
-                            if (! empty($email) && ! empty($pass)) {
-                                $password = md5($pass);
-                                $check_ad = mysqli_query($connection, "SELECT * FROM `user` WHERE `email` = '$email' AND `password` = '$password'");
 
-                               
+                      if (! empty($email) && ! empty($pass)) {
+                        $password = md5($pass);
+                        $check_ad = mysqli_query($connection, "SELECT * FROM `user` WHERE `email` = '$email' AND `password` = '$password'");
 
-                                if (mysqli_num_rows($check_ad) > 0) {
-                                  $row_user = mysqli_fetch_assoc($check_ad);
 
-                                    $_SESSION['user_login'] = $row_user['id'];
-                                    echo "<script>
+
+                        if (mysqli_num_rows($check_ad) > 0) {
+                          $row_user = mysqli_fetch_assoc($check_ad);
+
+                          $_SESSION['user_login'] = $row_user['id'];
+                          echo "<script>
                                 window.location.href = 'index.php';
                               </script>";
-                                } else {
-                                    echo "<script>
+                        } else {
+                          echo "<script>
                                   Swal.fire('Error','INCORRECT LOGIN DETAILS','error')
                                 </script>";
-                                }
-                            } else {
-                                echo "<script>
+                        }
+                      } else {
+                        echo "<script>
                               Swal.fire('warning','YOUR INPUT IS EMPTY','warning')
                             </script>";
-                            }
-                        }
+                      }
+                    }
 
                     ?>
                     <form method="POST">
@@ -140,7 +145,12 @@
                         <label class="form-label" for="basic-default-company">Password</label>
                         <input type="password" class="form-control" name="pass" id="basic-default-company" placeholder="Who Knows" />
                       </div>
-                     
+                      <div class="mb-3">
+                        <i>Don't have an account? </i><a href="<?php echo $domain ?>user/register.php"> Register</a>
+                      </div>
+
+
+
                       <button type="submit" class="btn btn-primary" name="proceed">LOGIN</button>
                     </form>
                   </div>
