@@ -77,7 +77,7 @@ include './server/connection.php';
                                 <!-- <div class="logo">
                                     <a href=""><img style="height: auto; width: 130px;padding-bottom:20px;display:flex;align-items:center;justify-content:space-between;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
                                 </div> -->
-                                <h2 style="font-size: 60px;margin: 0 0 70px 0; font-weight: 1000;padding-top:35px"><?php echo $sitename ?></h2>
+                                <h2 style="font-size: 48px;margin: 0 0 70px 0; font-weight: 800;padding-top:35px"><?php echo $sitename ?></h2>
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
 
