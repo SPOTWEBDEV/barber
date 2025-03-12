@@ -37,9 +37,9 @@
                     <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
                     <div class="menu-wrap">
                         <nav class="menu-nav">
-                            <div class="logo">
+                            <!-- <div class="logo">
                                 <a href=""><img style="height: 130px; width: 150px; padding: 10px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
-                            </div>
+                            </div> -->
                             <div class="navbar-wrap main-menu d-none d-lg-flex">
                                 <ul class="navigation">
                                     <li><a href="<?php echo $domain ?>">Home</a>
@@ -66,13 +66,12 @@
                     <div class="mobile-menu">
                         <nav class="menu-box">
                             <div class="close-btn"><i class="fas fa-times"></i></div>
-                            <div class="nav-logo">
+                            <!-- <div class="nav-logo">
                                 <a href=""><img src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
-                            </div>
+                            </div> -->
                             <div class="mobile-search">
                                 <form action="#">
-                                    <input type="text" placeholder="Search here...">
-                                    <button><i class="flaticon-search"></i></button>
+                                 <h1> <?php echo $sitename ?> </h1> 
                                 </form>
                             </div>
                             <div class="menu-outer">

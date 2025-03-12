@@ -74,9 +74,9 @@ include './server/connection.php';
                        
                         <div class="menu-wrap">
                             <nav class="menu-nav">
-                                <div class="logo">
+                                <!-- <div class="logo">
                                     <a href=""><img style="height: auto; width: 130px;padding-bottom:20px;display:flex;align-items:center;justify-content:space-between;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
-                                </div>
+                                </div> -->
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
 
@@ -125,14 +125,13 @@ include './server/connection.php';
                         <!-- Mobile Menu  -->
                         <div class="mobile-menu">
                             <nav class="menu-box">
-                                <div class="close-btn"><i class="fas fa-times"></i></div>
+                                <!-- <div class="close-btn"><i class="fas fa-times"></i></div>
                                 <div class="nav-logo">
                                     <a href="#"><img src="assets/img/logo.jpg" alt="Logo"></a>
-                                </div>
+                                </div> -->
                                 <div class="mobile-search">
                                     <form action="#">
-                                        <input type="text" placeholder="Search here...">
-                                        <button><i class="flaticon-search"></i></button>
+                                        <h1> <?php echo $sitename ?>  </h1>
                                     </form>
                                 </div>
                                 <div class="menu-outer">
