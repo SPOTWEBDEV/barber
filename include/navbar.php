@@ -4,6 +4,28 @@
 </button>
 <!-- Scroll-top-end-->
 
+
+<style>
+    .logo h4 {
+        font-size: 4vw; /* Adjust size relative to the viewport width */
+        text-align: center;
+    }
+
+    /* For smaller screens, adjust the font size */
+    @media (max-width: 768px) {
+        .logo h4 {
+            font-size: 5vw; /* You can increase or decrease based on your preference */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo h4 {
+            font-size: 4vw; /* For even smaller screens */
+        }
+    }
+</style>
+
+
 <!-- header-area -->
 <div id="header-fixed-height"></div>
 <header class="header-style-six">
@@ -37,10 +59,11 @@
                     <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
                     <div class="menu-wrap">
                         <nav class="menu-nav">
-                            <!-- <div class="logo">
-                                <a href=""><img style="height: 130px; width: 150px; padding: 10px;" src="<?php echo $domain ?>assets/img/logo.jpg" alt="Logo"></a>
-                            </div> -->
-                            <h2 style="font-size: 45px;margin: 0 0 70px 0; font-weight: 800;padding-top:35px"><?php echo $sitename ?></h2>
+                            <div class="logo">
+                                 <h2 style=""><?php echo $sitename ?></h2>
+
+                            </div> 
+                           
                             <div class="navbar-wrap main-menu d-none d-lg-flex">
                                 <ul class="navigation">
                                     <li><a href="<?php echo $domain ?>">Home</a>
